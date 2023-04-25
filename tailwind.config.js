@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       height: {
-        "blurH": "32rem"
+        "blurH": "32rem",
+        "blurH2": "45rem"
       },
       width: {
-        "blurW": "45rem",
-        "blurW2": "64rem"
+        "blurW": "45rem"
       },
       animation: {
         // animateBlur: "blur 30s linear infinite"

@@ -6,8 +6,8 @@ import NavigationBar from "../NavigationBar";
 function MainPageV2() {
   return (
     <>
-      
-      <NavigationBar/>
+
+      <NavigationBar />
 
       <main className="bg-gray-950 min-h-screen h-full min-w-full w-full">
 
@@ -55,38 +55,40 @@ function MainPageV2() {
                         src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"/>
                 </div> */}
 
-        {/* Intro Text */}
-        <div className="flex justify-start flex-col max-w-xl mx-auto p-4 py-64">  
-          <div className="absolute w-4 h-4 mt-1 ml-6 z-10
-              bg-cyan-300 rounded-full blur-sm mi animate-pulse"
-          >
+        <div className="relative flex flex-col justify-evenly min-h-screen h-full top-8">
+          {/* Intro Text */}
+          <div className="relative top-0 bottom-0 max-w-xl mx-auto m-4 pb-16">
+            <div className="w-4 h-4 mt-1 ml-6 z-10
+      bg-cyan-300 rounded-full blur-sm mi animate-pulse"
+            >
+            </div>
+            <h1 className="font-bold text-white text-5xl">Liam Sarjeant</h1>
+            <p className="text-orange-50 py-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+              in vestibulum sapien, id rutrum sapien. Phasellus condimentum, dui
+            </p>
           </div>
-          <h1 className="font-bold text-white text-5xl">Liam Sarjeant</h1>
-          <p className="text-orange-50 py-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            in vestibulum sapien, id rutrum sapien. Phasellus condimentum, dui
-            vel tristique euismod, mauris mauris venenatis nisi, nec blandit
-            augue velit in lacus. Praesent sed eros vel risus tristique aliquet
-            eget ac dolor.
-          </p>
+
+          {/* Node Graph */}
+          <div className="relative flex justify-center">
+            <div className="absolute -bottom-32 lg:w-96 lg:h-96 
+      bg-violet-400  rounded-full filter blur-3xl opacity-20"
+            >
+            </div>
+            <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-72 z-10 lg:w-blurW lg:h-blurH2">
+              <Spline scene="https://prod.spline.design/lTLAK28VWewyhHEx/scene.splinecode" />
+            </div>
+          </div>
         </div>
 
 
-        {/* Node Graph */}
-        <div className="flex overflow-hidden justify-center items-center">
-          <div className="absolute bottom-36 lg:w-96 lg:h-96 
-              bg-violet-400  rounded-full filter blur-3xl opacity-20"
-          >
-          </div>
-          <div className="absolute z-10 bottom-0 lg:w-blurW lg:h-blurH2">
-            <Spline scene="https://prod.spline.design/lTLAK28VWewyhHEx/scene.splinecode" />
-          </div>
+
+        <div>
           <img
             className="fixed -left-64 rotate-180 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
             src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
           />
         </div>
-
 
       </main>
 

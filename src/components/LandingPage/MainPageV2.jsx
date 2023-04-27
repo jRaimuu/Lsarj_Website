@@ -1,27 +1,13 @@
 import React from "react";
 import AboutPage from "../AboutPage";
 import Spline from "@splinetool/react-spline";
+import NavigationBar from "../NavigationBar";
 
 function MainPageV2() {
   return (
     <>
-      <nav className="fixed flex w-full p-4 top-0 z-20 justify-center items-center">
-        <div className="bg-zinc-900 flex gap-16 rounded-full opacity-80">
-          <div className="fixed -top-16 lg:w-96 lg:h-24 
-              bg-violet-400 rounded-full filter blur-3xl opacity-70"
-          >
-          </div>
-          <button className="text-zinc-500 rounded-full px-4 py-1 hover:text-zinc-50 hover:bg-zinc-800">
-            HOME
-          </button>
-          <button className="text-zinc-500 px-4 py-1 rounded-full hover:text-zinc-50 hover:bg-zinc-800">
-            PROJECTS
-          </button>
-          <button className="text-zinc-500 px-4 py-1 rounded-full hover:text-zinc-50 hover:bg-zinc-800">
-            ABOUT
-          </button>
-        </div>
-      </nav>
+      
+      <NavigationBar/>
 
       <main className="bg-gray-950 min-h-screen h-full min-w-full w-full">
 
@@ -59,6 +45,33 @@ function MainPageV2() {
           />
         </div>
 
+
+        {/* <div className='overflow-hidden flex justify-center items-center fixed'>
+                    <div className=' -top-96 -left-96 sm:w-96 sm:h-96 lg:w-blurW lg:h-blurH2 
+                     bg-indigo-200  rounded-full filter blur-fsm opacity-60 hover:animate-animateBlur'></div>
+                    <div className=' -top-96 -left-96 sm:left-96 sm:-top-64 sm:w-96 sm:h-96 lg:w-blurW lg:h-blurH2
+                     bg-purple-200  rounded-full filter mix-blend-lighten blur-f3xl opacity-70 hover:animate-animateBlur'></div>
+                    {/* <img className='flex filter rounded-full top-0 -left-96'
+                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"/>
+                </div> */}
+
+        {/* Intro Text */}
+        <div className="flex justify-start flex-col max-w-xl mx-auto p-4 py-64">  
+          <div className="absolute w-4 h-4 mt-1 ml-6 z-10
+              bg-cyan-300 rounded-full blur-sm mi animate-pulse"
+          >
+          </div>
+          <h1 className="font-bold text-white text-5xl">Liam Sarjeant</h1>
+          <p className="text-orange-50 py-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            in vestibulum sapien, id rutrum sapien. Phasellus condimentum, dui
+            vel tristique euismod, mauris mauris venenatis nisi, nec blandit
+            augue velit in lacus. Praesent sed eros vel risus tristique aliquet
+            eget ac dolor.
+          </p>
+        </div>
+
+
         {/* Node Graph */}
         <div className="flex overflow-hidden justify-center items-center">
           <div className="absolute bottom-36 lg:w-96 lg:h-96 
@@ -74,29 +87,7 @@ function MainPageV2() {
           />
         </div>
 
-        {/* <div className='overflow-hidden flex justify-center items-center fixed'>
-                    <div className=' -top-96 -left-96 sm:w-96 sm:h-96 lg:w-blurW lg:h-blurH2 
-                     bg-indigo-200  rounded-full filter blur-fsm opacity-60 hover:animate-animateBlur'></div>
-                    <div className=' -top-96 -left-96 sm:left-96 sm:-top-64 sm:w-96 sm:h-96 lg:w-blurW lg:h-blurH2
-                     bg-purple-200  rounded-full filter mix-blend-lighten blur-f3xl opacity-70 hover:animate-animateBlur'></div>
-                    {/* <img className='flex filter rounded-full top-0 -left-96'
-                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"/>
-                </div> */}
 
-        <div className="flex justify-start flex-col max-w-xl mx-auto p-4 py-80">
-          <div className="absolute w-4 h-4 mt-1 ml-6 z-10
-              bg-cyan-300 rounded-full blur-sm mi animate-pulse"
-          >
-          </div>
-          <h1 className="font-bold text-white text-5xl">Liam Sarjeant</h1>
-          <p className="text-orange-50 py-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            in vestibulum sapien, id rutrum sapien. Phasellus condimentum, dui
-            vel tristique euismod, mauris mauris venenatis nisi, nec blandit
-            augue velit in lacus. Praesent sed eros vel risus tristique aliquet
-            eget ac dolor.
-          </p>
-        </div>
       </main>
 
       <AboutPage />

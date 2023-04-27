@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'space': ['Consolas'],
+      },
       height: {
         "blurH": "32rem",
         "blurH2": "45rem"

@@ -11,10 +11,12 @@ export default {
       },
       height: {
         "blurH": "32rem",
-        "blurH2": "45rem"
+        "blurH2": "45rem",
+        "nodeGraphH": "24rem"
       },
       width: {
-        "blurW": "45rem"
+        "blurW": "45rem",
+        "nodeGraphW": "24rem"
       },
       animation: {
         animateBlur: "blur 5s ease-in-out infinite, pulse 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite",

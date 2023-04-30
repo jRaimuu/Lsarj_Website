@@ -4,7 +4,7 @@ function AboutPage() {
     return (
         <>
 
-            <main className='bg-gray-950 min-h-screen h-full relative text-white'>
+            <main className='bg-gray-50 min-h-screen h-full relative text-white'>
                 {/* <div className="flex overflow-hidden justify-end items-center">
                     <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
             bg-indigo-200 rounded-full filter blur-sm opacity-60"

@@ -2,8 +2,17 @@ import React from "react";
 import AboutPage from "../AboutPage";
 import Spline from "@splinetool/react-spline";
 import NavigationBar from "../NavigationBar";
+import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
+
 
 function MainPageV2() {
+
+  const [text] = useTypewriter({
+    words: ['Computer Science Student', 'Developer', 'Designer', "Tech Enthusiast"],
+    loop: {},
+  })
+
+
   return (
     <>
 
@@ -56,27 +65,35 @@ function MainPageV2() {
                 </div> */}
 
         <div className="relative flex flex-col justify-evenly min-h-screen h-full top-8">
+
           {/* Intro Text */}
           <div className="relative top-0 bottom-0 max-w-xl mx-auto m-4 pb-16">
-            <div className="w-4 h-4 mt-1 ml-6 z-10
-      bg-cyan-300 rounded-full blur-sm mi animate-pulse"
+            <div className="absolute w-4 h-6 pt-6 ml-8 mt-1 z-10
+            bg-cyan-300 rounded-full blur-sm mi animate-pulse"
             >
             </div>
-            <h1 className="font-bold text-white text-5xl">Liam Sarjeant</h1>
-            <p className="text-orange-50 py-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-              in vestibulum sapien, id rutrum sapien. Phasellus condimentum, dui
-            </p>
+            <h1 className="pb-1 font-bold text-6xl tracking-wide text-white">
+              Liam Sarjeant
+            </h1>
+            <span className="text-lg font-space py-4 text-violet-400">
+              {text}
+            </span>
+            <span className="text-cyan-300 opacity-75">
+              <Cursor
+                cursorStyle="__"
+              />
+            </span>
           </div>
 
           {/* Node Graph */}
           <div className="relative flex justify-center">
             <div className="absolute -bottom-32 lg:w-96 lg:h-96 
-      bg-violet-400  rounded-full filter blur-3xl opacity-20"
+            bg-violet-400  rounded-full filter blur-3xl opacity-20"
             >
             </div>
-            <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-72 z-10 lg:w-blurW lg:h-blurH2">
-              <Spline scene="https://prod.spline.design/lTLAK28VWewyhHEx/scene.splinecode" />
+            <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-64 z-10 lg:w-blurW lg:h-blurH2">
+              <Spline scene="https://draft.spline.design/IGkZ5PqnKyTs5cPN/scene.splinecode" />
+              {/* <Spline scene="https://draft.spline.design/MwCVeXrZbvhoMES0/scene.splinecode" /> */}
             </div>
           </div>
         </div>

@@ -21,6 +21,7 @@ export default {
       animation: {
         animateBlur: "blur 5s ease-in-out infinite, pulse 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite",
         animateNode: "node 5s ease-in-out infinite",
+        animateComet: "pulse 10s ease-in-out infinite",
         // animateBlur: "pulse 30s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite"
       },
       keyframes: {

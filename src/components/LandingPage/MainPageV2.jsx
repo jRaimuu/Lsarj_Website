@@ -1,8 +1,10 @@
 import React from "react";
-import AboutPage from "../AboutPage";
+import AboutPageV1 from "../AboutPageV1";
 import Spline from "@splinetool/react-spline";
 import NavigationBar from "../NavigationBar";
 import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
+import AboutPage from "../AboutPage";
+import ProjectsPage from "./ProjectsPage";
 
 
 function MainPageV2() {
@@ -18,38 +20,41 @@ function MainPageV2() {
 
       <NavigationBar />
 
-      <main className="bg-gray-950 min-h-screen h-full min-w-full w-full">
+      {/* <main className="bg-gray-950 min-h-screen h-full min-w-full w-screen"> */}
+      <main className="bg-gray-950 min-h-screen w-screen max-w-full overflow-hidden">
 
         {/* <div className='fixed w-blurW h-32 border border-t-transparent bg-sky-400 mix-blend-plus-lighter rounded-full filter blur-3xl opacity-40 '></div> */}
 
         {/* Corner Stars */}
+        {/* changed from fixed to relative */}
         <div className="flex overflow-hidden justify-center items-center">
-          <div className="fixed w-6 h-6 top-8 left-32 -skew-x-12 
+          <div className="absolute w-6 h-6 top-8 left-32 -skew-x-12 
               bg-white rounded-full blur-sm opacity-60"
           >
           </div>
-          <div className="fixed w-4 h-4 left-40 top-52 skew-x-12 
+          <div className="absolute w-4 h-4 left-40 top-52 skew-x-12 
               bg-blue-200 rounded-full blur-sm opacity-50"
           >
           </div>
-          <div className="fixed w-8 h-8 left-80 top-24 skew-x-12 
+          <div className="absolute w-8 h-8 left-80 top-24 skew-x-12 
               bg-white rounded-full blur-sm opacity-70"
           >
           </div>
         </div>
 
         {/* Moon */}
-        <div className="flex overflow-hidden justify-end items-center">
-          <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
+        {/* changed from fixed to relative */}
+        <div className="relative bg-red-400 flex justify-end items-center">
+          <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
             bg-indigo-200 rounded-full filter blur-sm opacity-60"
           >
           </div>
-          <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
+          <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
             bg-violet-200 rounded-full filter blur-2xl opacity-70 mix-blend-lighten hover:animate-animateBlur"
           >
           </div>
           <img
-            className="fixed top-0 -right-52 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
+            className="absolute top-0 -right-52 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
             src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
           />
         </div>
@@ -86,12 +91,14 @@ function MainPageV2() {
           </div>
 
           {/* Node Graph */}
+          {/* -bottom-20 */}
           <div className="relative flex justify-center">
-            <div className="absolute -bottom-32 lg:w-96 lg:h-96 
-            bg-violet-400  rounded-full filter blur-3xl opacity-20"
+            <div className="absolute -bottom-20 lg:w-80 lg:h-80
+            bg-violet-400  rounded-full filter blur-2xl opacity-20"
             >
             </div>
-            <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-64 z-10 lg:w-blurW lg:h-blurH2">
+            {/* <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-64 z-10 lg:w-blurW lg:h-blurH2"> */}
+            <div className="absolute w-[500px] h-[500px] z-10 md:w-blurW md:h-blurH2 -bottom-36 md:-bottom-64">
               <Spline scene="https://draft.spline.design/IGkZ5PqnKyTs5cPN/scene.splinecode" />
               {/* <Spline scene="https://draft.spline.design/MwCVeXrZbvhoMES0/scene.splinecode" /> */}
             </div>
@@ -100,16 +107,32 @@ function MainPageV2() {
 
 
 
-        <div>
+        {/* <div>
           <img
-            className="fixed -left-64 rotate-180 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
+            className="absolute -left-64 rotate-180 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
             src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
           />
-        </div>
+        </div> */}
+
+        {/* <body className="bg-gray-950 h-60">
+          <div>
+            <img
+              className="absolute skew-y-12 skew-x-12 scale-x-50 -bottom-32 -left-[350px] -rotate-180 rounded-full filter blur-2xl mix-blend-difference"
+              src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
+            />
+          </div>
+          <div className="absolute w-16 h-28 left-[410px] -bottom-36 -rotate-45 -skew-y-12 
+              bg-white rounded-full blur-xl opacity-50">
+          </div>
+          <div className="absolute w-6 h-40 left-[410px] -bottom-36 -rotate-45 -skew-y-12 
+              bg-white rounded-full blur-xl opacity-50 ">
+          </div>
+        </body> */}
 
       </main>
 
-      <AboutPage />
+
+      <AboutPageV1 />
     </>
   );
 }

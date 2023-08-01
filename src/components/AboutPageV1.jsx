@@ -6,7 +6,12 @@ function AboutPage() {
         <>
 
 
-            <main className=' bg-gray-950 min-h-screen h-full text-white'>
+            <main className='bg-gray-950 min-h-screen h-full text-white'>
+
+            <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
+                            className='absolute filter mix-blend-soft-light opacity-75   w-screen h-screen' />
+
+                {/* Comet */}
                 <div className="sm:h-60 bg-gray-950 sm:static h-0 overflow-hidden relative">                    {/* <div>
                         <img
                             className="absolute skew-y-12 skew-x-12 scale-x-50 -bottom-32 left-[500px] -rotate-180 rounded-full filter blur-2xl mix-blend-difference"
@@ -28,55 +33,20 @@ function AboutPage() {
                 </div>
 
 
-                {/* <div className='absolute top-0 left-0 w-full h-full bg-gray-950'>
-                </div> */}
-                {/* <div>
-                    <img
-                        className="fixed -left-64 rotate-180 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
-                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
-                    />
-                </div> */}
-                {/* Corner Stars */}
-                {/* <div className="flex overflow-hidden justify-center items-center">
-                    <div className="fixed w-6 h-6 top-8 left-32 -skew-x-12 
-              bg-white rounded-full blur-sm opacity-60"
-                    >
-                    </div>
-                    <div className="fixed w-4 h-4 left-40 top-52 skew-x-12 
-              bg-blue-200 rounded-full blur-sm opacity-50"
-                    >
-                    </div>
-                    <div className="fixed w-8 h-8 left-80 top-24 skew-x-12 
-              bg-white rounded-full blur-sm opacity-70"
-                    >
-                    </div>
-                </div> */}
-
-                {/* Moon */}
-                {/* <div className="flex overflow-hidden justify-end items-center">
-                    <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
-            bg-indigo-200 rounded-full filter blur-sm opacity-60"
-                    >
-                    </div>
-                    <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
-            bg-violet-200 rounded-full filter blur-2xl opacity-70 mix-blend-lighten hover:animate-animateBlur"
-                    >
-                    </div>
-                    <img
-                        className="fixed top-0 -right-52 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
-                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
-                    />
-                </div> */}
-
+                {/* Planet silhouette */}
                 <div className='relative flex justify-center items-center h-full overflow-hidden'>
                     <div className='absolute top-24 scale-x-150 w-full h-screen rounded-t-full  blur-2xl bg-cyan-800 '>
                     </div>
                     <div className='absolute top-36 scale-x-150 w-full h-screen rounded-t-full  blur-2xl bg-violet-900'>
                     </div>
-                    <div className='relative top-32 scale-x-150 w-full h-screen rounded-t-full bg-gray-950 shadow-blue-200 shadow-2xl text-white flex justify-center items-center'>
-                        {/* Add your content inside the rounded circle */}
-                        <h1 className='text-4xl lg:text-6xl font-bold'>About Page</h1>
+                    <div className='relative top-32 scale-x-150 w-full h-screen rounded-t-full 
+                                    bg-gradient-to-b from-gray-900 to-gray-950 border-2 border-opacity-75 border-blue-400 text-white flex justify-center items-center'>
+                        <img src="https://www.solarsystemscope.com/textures/download/2k_haumea_fictional.jpg"
+                            className='absolute filter mix-blend-soft-light opacity-10 w-screen h-screen rounded-t-full' />
                     </div>
+                    {/* https://c4.wallpaperflare.com/wallpaper/566/308/22/landed-on-outer-earth-wallpaper-preview.jpg
+                    https://w7.pngwing.com/pngs/691/438/png-transparent-desktop-blue-space-nebula-space-texture-blue-atmosphere.png 
+                    https://papers.co/wallpaper/papers.co-mo25-landed-on-outer-earth-blue-space-star-texture-25-wallpaper.jpg*/}
                 </div>
 
                 {/* <div className="flex overflow-hidden justify-end items-center">

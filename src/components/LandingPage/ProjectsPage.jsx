@@ -14,7 +14,7 @@ function ProjectsPage() {
 
     return (
         <>
-            <main className='bg-stone-300 min-h-screen h-full relative text-black overflow-hidden'>
+            <main className='bg-gray-950 min-h-screen h-full relative text-black overflow-hidden'>
 
                 <div className="relative top-64 bottom-0 max-w-xl mx-auto m-4 pb-16">
                     <div className="absolute w-4 h-6 pt-6 ml-8 mt-1 z-10

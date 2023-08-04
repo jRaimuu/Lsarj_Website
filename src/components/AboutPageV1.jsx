@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import ProjectsPage from './LandingPage/ProjectsPage'
 import { motion, useScroll, useTransform } from "framer-motion"
+import Eco_Archive from "../assets/Eco_Archive.png";
 
 function AboutPage() {
 
@@ -59,6 +60,12 @@ function AboutPage() {
                     </div>
                 </section>
 
+                {/* Starry Overlay */}
+                <div className='relative opacity-50'>
+                    <img src="https://github.githubassets.com/images/modules/site/home-campaign/bg-stars-1.webp"
+                        className="absolute h-[900px] w-[1250px] -top-72 right-0 object-cover lg:opacity-100 opacity-0"
+                    />
+                </div>
 
                 <section>
                     <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-both'></div>
@@ -70,14 +77,26 @@ function AboutPage() {
                         {/* <div className='bg-sate-200 bg-opacity-10 min-h-fit backdrop-filter backdrop-blur-sm rounded-lg shadow-xl z-2 brder borer-slate-700'> */}
                         {/* Eco Archive */}
                         <div className='relative'>
-                            <div className='absolute -inset-0.5 opacity-50 bg-blue-300 rounded-lg blur'>
-                            </div>
-                            <div className='relative bg-slate-900 min-h-fit backdrop-filter backdrop-blur-sm rounded-lg shadow-xl border border-slate-700'>
-                                <h2 className='flex m-3 justify-start text-3xl font-mono font-bold text-blue-400'>Eco Archive</h2>
-                                <p className='m-3'>
-                                    Developed a full-stack web application with a database management system using MySQL to retrofit legacy information storage processes,
-                                    enhancing data security, efficiency and accessibility for both organizational operations and customer interactions.
-                                </p>
+                            <div className='absolute inset-10 opacity-70 bg-gradient-to-r from-blue-400 to-violet-400 rounded-full blur-2xl'></div>
+                            <div className='relative bg-opacity-25 min-h-fit backdrop-filter backdrop-blur-3xl rounded-lg shadow-lg border border-gray-900 border-t-slate-700 border-r-slate-700  border-opacity-100'>
+                                <span className='flex flex-col justify-start m-4'>
+                                    <div className='flex flex-row justify-between'>
+                                        <h2 className=' text-3xl font-mono font-bold text-slate-200'>Eco Archive</h2>
+                                        <img src={Eco_Archive}
+                                            className='h-8 w-8 mr-3' />
+                                    </div>
+                                    <div className='flex flex-row pt-1'>
+                                        <h3 className='text-blue-300 bg-blue-200 bg-opacity-10 px-1.5 rounded-full mr-2'>React.js</h3>
+                                        <h3 className='text-amber-100 bg-amber-50 bg-opacity-10 px-1.5 rounded-full mr-2'>SQL</h3>
+                                        <h3 className='text-sky-200 bg-sky-200 bg-opacity-10 px-1.5 rounded-full mr-2'>TailwindCSS</h3>
+                                    </div>
+                                    <p className='pt-4 text-slate-200' >
+                                        Developed a full-stack web application with a database management system using MySQL to retrofit legacy information storage processes,
+                                        enhancing data security, efficiency and accessibility for both organizational operations and customer interactions. The goal was to ...address these challenges..
+                                        and enable users to make actionable and insightful decisions on managing the recycling depot. Also, talk about charity. THis project challenged
+                                        me to learn...
+                                    </p>
+                                </span>
                             </div>
                         </div>
 

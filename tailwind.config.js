@@ -18,6 +18,15 @@ export default {
         "blurW": "45rem",
         "nodeGraphW": "24rem"
       },
+      backgroundImage: {
+        'linear-gradient-bottom': 'linear-gradient(to bottom, rgba(13,13,13,127), rgba(0,0,0,0))',
+        'gradient-image-bottom': 'linear-gradient(to bottom, rgba(13,13,13,127), rgba(0,0,0,0)), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
+        'gradient-image-top': 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(13,13,13,127)), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
+        'gradient-image-both': 'linear-gradient(to bottom, rgba(0,0,0,0)), rgba(0,0,0,0), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
+      },
+      screens: {
+        'xs': '516px',
+      },
       animation: {
         animateBlur: "blur 5s ease-in-out infinite, pulse 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite",
         animateNode: "node 5s ease-in-out infinite",
@@ -31,43 +40,6 @@ export default {
           },
           "20%": {
             opacity: "0.5"
-          }
-        },
-        blur: {
-          // "0%": {
-          //   transform: "translate(0px, 0px) scale(1)"
-          // },
-          // "25%": {
-          //   transform: "scaleX(1.1) skewX(-10deg) skewY(10deg)"
-          // },
-          // "50%": {
-          //   transform: "scaleX(1.2)"
-          // },
-          // "75%": {
-          //   transform: "scaleX(1.1) skewX(-10deg) skewY(10deg)"
-          // },
-          // "100%": {
-          //   transform: "translate(0px, 0px) scale(1)"
-          // }
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)"
-          },
-          "50%": {
-            transform: "scale(1.02)"
-          },
-          "100%": {
-            transform: "translate(0px, 0px) scale(1)"
-          }
-        },
-        node: {
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)"
-          },
-          "50%": {
-            transform: "scale(1.02) skew(-5deg)"
-          },
-          "100%": {
-            transform: "translate(0px, 0px) scale(1)"
           }
         },
       }

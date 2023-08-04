@@ -23,8 +23,16 @@ function MainPageV2() {
       {/* <main className="bg-gray-950 min-h-screen h-full min-w-full w-screen"> */}
       <main className="bg-gray-950 min-h-screen w-screen max-w-full overflow-hidden">
 
-      <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
-            className='absolute filter mix-blend-soft-light opacity-75 rotate-180 w-screen h-screen' />
+        {/* <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
+            className='absolute filter mix-blend-plus-lighter opacity-[100%] -scale-x-100 w-screen h-screen' /> */}
+        {/* <div
+          className='absolute filter mix-blend-plus-lighter opacity-[25%] w-full h-screen bg-cover bg-center
+                    bg-[linear-gradient(to_top,rgba(13,13,13,127),rgba(0,0,0,0)),url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")]'
+        >
+        </div> */}
+
+        <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
+
 
         {/* <div className='fixed w-blurW h-32 border border-t-transparent bg-sky-400 mix-blend-plus-lighter rounded-full filter blur-3xl opacity-40 '></div> */}
 
@@ -52,7 +60,7 @@ function MainPageV2() {
             bg-indigo-200 rounded-full filter blur-sm opacity-60"
           >
             <img src="https://w7.pngwing.com/pngs/691/438/png-transparent-desktop-blue-space-nebula-space-texture-blue-atmosphere.png"
-                            className='absolute filter mix-blend-exclusion opacity-70 w-screen h-full rounded-full' />
+              className='absolute filter mix-blend-difference rotate-12 opacity-100 w-screen h-full rounded-full' />
           </div>
           <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
             bg-violet-200 rounded-full filter blur-2xl opacity-70 mix-blend-lighten hover:animate-animateBlur"
@@ -62,7 +70,7 @@ function MainPageV2() {
             className="absolute top-0 -right-52 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
             src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
           />
-          
+
         </div>
 
 
@@ -78,12 +86,12 @@ function MainPageV2() {
         <div className="relative flex flex-col justify-evenly min-h-screen h-full top-8">
 
           {/* Intro Text */}
-          <div className="relative top-0 bottom-0 max-w-xl mx-auto m-4 pb-16">
-            <div className="absolute w-4 h-6 pt-6 ml-8 mt-1 z-10
-            bg-cyan-300 rounded-full blur-sm mi animate-pulse"
+          <div className="relative top-0 bottom-0 max-w-xl px-3 mx-auto m-4 pb-16">
+            <div className="absolute w-6 h-2 pt-7 xs:ml-[302px] ml-28 xs:mt-1 mt-20 z-10
+            bg-cyan-300 rounded-full blur-sm  animate-pulse"
             >
             </div>
-            <h1 className="pb-1 font-bold text-6xl tracking-wide text-white">
+            <h1 className="pb-1 font-bold text-7xl tracking-wide text-white">
               Liam Sarjeant
             </h1>
             <span className="text-lg font-space py-4 text-violet-400">
@@ -134,6 +142,7 @@ function MainPageV2() {
               bg-white rounded-full blur-xl opacity-50 ">
           </div>
         </body> */}
+
 
       </main>
 

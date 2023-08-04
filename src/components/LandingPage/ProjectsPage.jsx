@@ -9,12 +9,18 @@ function ProjectsPage() {
     const [text] = useTypewriter({
         words: ['Computer Science Student', 'Developer', 'Designer', "Tech Enthusiast"],
         loop: {},
-      })
+    })
 
 
     return (
         <>
-            <main className='bg-gray-950 min-h-screen h-full relative text-black overflow-hidden'>
+            <main className='relative z-10 bg-gray-950 min-h-screen h-full text-black overflow-hidden bg-fixed'>
+
+                {/* <img src="https://www.solarsystemscope.com/textures/download/2k_haumea_fictional.jpg"
+                            className='absolute filter mix-blend-soft-light rotate opacity-20 w-screen h-screen' /> */}
+
+                {/* <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-bottom'></div> */}
+
 
                 <div className="relative top-64 bottom-0 max-w-xl mx-auto m-4 pb-16">
                     <div className="absolute w-4 h-6 pt-6 ml-8 mt-1 z-10

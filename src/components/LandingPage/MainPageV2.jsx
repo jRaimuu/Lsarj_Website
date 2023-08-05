@@ -5,7 +5,7 @@ import NavigationBar from "../NavigationBar";
 import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
 import AboutPage from "../AboutPage";
 import ProjectsPage from "./ProjectsPage";
-
+import { useInView } from "react-intersection-observer";
 
 function MainPageV2() {
 
@@ -14,6 +14,7 @@ function MainPageV2() {
     loop: {},
   })
 
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
     <>
@@ -31,7 +32,7 @@ function MainPageV2() {
         >
         </div> */}
 
-        <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
+        <div className='absolute filter mix-blend-plus- opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
 
 
         {/* <div className='fixed w-blurW h-32 border border-t-transparent bg-sky-400 mix-blend-plus-lighter rounded-full filter blur-3xl opacity-40 '></div> */}
@@ -62,9 +63,11 @@ function MainPageV2() {
             <img src="https://w7.pngwing.com/pngs/691/438/png-transparent-desktop-blue-space-nebula-space-texture-blue-atmosphere.png"
               className='absolute filter mix-blend-difference rotate-12 opacity-100 w-screen h-full rounded-full' />
           </div>
+          {/* bg-violet-200 rounded-full filter blur-2xl opacity-70 mix-blend-lighten hover:animate-animateBlur" */}
           <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
-            bg-violet-200 rounded-full filter blur-2xl opacity-70 mix-blend-lighten hover:animate-animateBlur"
+            bg-violet-200 rounded-full blur-2xl opacity-70 hover:animate-animateBlur"
           >
+
           </div>
           <img
             className="absolute top-0 -right-52 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
@@ -108,13 +111,17 @@ function MainPageV2() {
           {/* -bottom-20 */}
           <div className="relative flex justify-center">
             <div className="absolute -bottom-20 lg:w-80 lg:h-80
-            bg-violet-400  rounded-full filter blur-2xl opacity-20"
+            bg-violet-400  rounded-full blur-2xl opacity-20"
             >
             </div>
             {/* <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-64 z-10 lg:w-blurW lg:h-blurH2"> */}
-            <div className="absolute w-[500px] h-[500px] z-10 md:w-blurW md:h-blurH2 -bottom-36 md:-bottom-64">
-              <Spline scene="https://draft.spline.design/IGkZ5PqnKyTs5cPN/scene.splinecode" />
-              {/* <Spline scene="https://draft.spline.design/MwCVeXrZbvhoMES0/scene.splinecode" /> */}
+            <div
+              ref={ref}
+              className="absolute w-[500px] h-[500px] z-10 md:w-blurW md:h-blurH2 -bottom-36 md:-bottom-64"
+            >
+              {inView && (
+                <Spline scene="https://draft.spline.design/IGkZ5PqnKyTs5cPN/scene.splinecode" />
+              )}
             </div>
           </div>
         </div>

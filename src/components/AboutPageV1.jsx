@@ -41,7 +41,7 @@ function AboutPage() {
                 </div> */}
 
                 <section>
-                    <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-bottom'></div>
+                    <div className='absolute filter mix-blend-plus- opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-bottom'></div>
 
                     {/* Comet */}
                     <div className="sm:h-48 sm:static h-0 overflow-hidden relative">
@@ -49,7 +49,7 @@ function AboutPage() {
                     bg-cyan-800 rounded-full blur-3xl opacity-90 ">
                         </div>
                         <div className="absolute w-16 h-80 left-[210px] -bottom-40 -rotate-45 -skew-y-12 
-                    bg-indigo-950 rounded-full blur-2xl opacity-75 filter mix-blend-lighten">
+                    bg-indigo-950 rounded-full blur-2xl opacity-75">
                         </div>
                         <div className="absolute w-16 h-28 left-[340px] -bottom-44 -rotate-45 -skew-y-12 
                     bg-white rounded-full blur-xl opacity-50">
@@ -71,7 +71,7 @@ function AboutPage() {
                     <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-both'></div>
 
                     {/* Personal Projects */}
-                    <h1 className='flex justify-start sm:p md:mx-32 mx-3 my-3 sm:text-5xl text-4xl font-bold tracking-wide'>PERSONAL PROJECTS</h1>
+                    <h1 className='relative flex justify-start sm:p md:mx-32 mx-3 my-3 sm:text-5xl text-4xl font-bold tracking-wide '>PERSONAL PROJECTS</h1>
 
                     <div className='grid lg:grid-cols-2 grid-flow-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'>
                         {/* <div className='bg-sate-200 bg-opacity-10 min-h-fit backdrop-filter backdrop-blur-sm rounded-lg shadow-xl z-2 brder borer-slate-700'> */}

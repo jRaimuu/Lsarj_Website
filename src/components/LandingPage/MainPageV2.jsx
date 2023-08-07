@@ -22,7 +22,7 @@ function MainPageV2() {
       <NavigationBar />
 
       {/* <main className="bg-gray-950 min-h-screen h-full min-w-full w-screen"> */}
-      <main className="bg-gray-950 min-h-[800px] h-screen w-screen max-w-full overflow-hidden">
+      <main className="relative bg-gray-950 min-h-[800px] h-screen w-screen max-w-full overflow-hidden">
 
         {/* <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
             className='absolute filter mix-blend-plus-lighter opacity-[100%] -scale-x-100 w-screen h-screen' /> */}

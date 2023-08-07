@@ -7,6 +7,7 @@ import Tables2 from "../assets/Tables2.mp4";
 import Dashboard3 from "../assets/Dashboard3.mp4";
 import DashboardPhoto from "../assets/DashPhoto.jpg";
 import Tables from "../assets/Tables.mp4";
+// import GitHub from "../assets/GitHub.png";
 
 
 function AboutPage() {
@@ -47,7 +48,7 @@ function AboutPage() {
 
     return (
         <>
-            <main className='bg-gray-950 min-h-screen h-full text-white overflow-x-hidden'>
+            <main className='bg-gray-950 min-h-screen min-w-fit h-full text-white overflow-x-hidden'>
 
                 {/* <div className='absolute bg-gradient-to-b from-gray-900 to-gray-950 filter opacity-[100%] w-screen h-screen bg-cover bg-center '>
                     <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
@@ -110,18 +111,28 @@ function AboutPage() {
                         >
                             <div className='absolute inset-10 opacity-70 bg-gradient-to-r from-blue-400 to-violet-400 rounded-full blur-2xl'></div>
                             <div className='relative bg-opacity-25 h-full backdrop-filter backdrop-blur-3xl rounded-lg shadow-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
-                                <span className='flex flex-col justify-start m-4'>
+                                <span className='flex flex-col justify-start xl:m-10 m-6'>
                                     <div className='flex flex-row justify-between'>
-                                        <h2 className='text-3xl font-mono font-bold text-slate-200'>Eco Archive</h2>
-                                        <img src={Eco_Archive}
-                                            className='h-8 w-8 mr-3' />
+                                        <div className='flex flex-row justify-start'>
+                                            <h2 className='text-3xl pr-2 font-mono font-bold text-slate-200'>Eco Archive</h2>
+                                            <a href="https://github.com/anthonyjdam/Eco_Archive"
+                                                target="_blank" rel="noopener noreferrer"
+                                            >
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-9">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <img src={Eco_Archive} className='h-8 w-8 mr-3' />
                                     </div>
                                     <div className='flex flex-row pt-1'>
                                         <h3 className='text-blue-300 bg-blue-200 bg-opacity-10 px-1.5 rounded-full mr-2'>React.js</h3>
                                         <h3 className='text-amber-100 bg-amber-50 bg-opacity-10 px-1.5 rounded-full mr-2'>SQL</h3>
                                         <h3 className='text-sky-200 bg-sky-200 bg-opacity-10 px-1.5 rounded-full mr-2'>TailwindCSS</h3>
                                     </div>
-                                    <p className='pt-4 text-slate-200' >
+                                    {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
+                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' >
+
                                         Developed a full-stack web application with a database management system using MySQL to retrofit legacy information storage processes,
                                         enhancing data security, efficiency and accessibility for both organizational operations and customer interactions. The goal was to ...address these challenges..
                                         and enable users to make actionable and insightful decisions on managing the recycling depot. Also, talk about charity. THis project challenged

@@ -22,7 +22,7 @@ function MainPageV2() {
       <NavigationBar />
 
       {/* <main className="bg-gray-950 min-h-screen h-full min-w-full w-screen"> */}
-      <main className="relative bg-gray-950 min-h-[800px] h-screen w-screen max-w-full overflow-hidden">
+      <main className="bg-gray-950 min-w-fit h-screen lg:min-h-screen min-h-[800px] w-screen max-w-full overflow-hidden">
 
         {/* <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
             className='absolute filter mix-blend-plus-lighter opacity-[100%] -scale-x-100 w-screen h-screen' /> */}
@@ -32,14 +32,14 @@ function MainPageV2() {
         >
         </div> */}
 
-        <div className='absolute filter mix-blend-plus- opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
+        <div className='absolute filter mix-blend-plus- opacity-40 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
 
 
         {/* <div className='fixed w-blurW h-32 border border-t-transparent bg-sky-400 mix-blend-plus-lighter rounded-full filter blur-3xl opacity-40 '></div> */}
 
         {/* Corner Stars */}
         {/* changed from fixed to relative */}
-        <div className="flex overflow-hidden justify-center items-center">
+        <div className="flex relative overflow-x-visible justify-center items-center">
           <div className="absolute w-6 h-6 top-8 left-32 -skew-x-12 
               bg-white rounded-full blur-sm opacity-60"
           >
@@ -56,7 +56,7 @@ function MainPageV2() {
 
         {/* Moon */}
         {/* changed from fixed to relative */}
-        <div className="relative bg-red-400 flex justify-end items-center">
+        <div className="relative flex justify-end items-center">
           <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
             bg-indigo-200 rounded-full filter blur-sm opacity-60"
           >
@@ -70,7 +70,7 @@ function MainPageV2() {
 
           </div>
           <img
-            className="absolute top-0 -right-52 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
+            className="absolute top-0 -right-52 rounded-full filter mix-blend-difference opacity-100 blur-2xl bottom-0"
             src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
           />
 
@@ -110,8 +110,7 @@ function MainPageV2() {
           {/* Node Graph */}
           {/* -bottom-20 */}
           <div className="relative flex justify-center">
-            <div className="absolute -bottom-20 lg:w-80 lg:h-80
-            bg-violet-400  rounded-full blur-2xl opacity-20"
+            <div className="absolute md:-bottom-20 bottom-0 md:w-80 w-44 md:h-80 h-44 bg-violet-400  rounded-full blur-2xl opacity-20"
             >
             </div>
             {/* <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-64 z-10 lg:w-blurW lg:h-blurH2"> */}
@@ -154,7 +153,7 @@ function MainPageV2() {
       </main>
 
 
-      <AboutPageV1 />
+      <AboutPage />
     </>
   );
 }

@@ -20,9 +20,9 @@ export default {
       },
       backgroundImage: {
         'linear-gradient-bottom': 'linear-gradient(to bottom, rgba(13,13,13,127), rgba(0,0,0,0))',
-        'gradient-image-bottom': 'linear-gradient(to bottom, rgba(13,13,13,127), rgba(0,0,0,0)), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
-        'gradient-image-top': 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(13,13,13,127)), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
-        'gradient-image-both': 'linear-gradient(to bottom, rgba(0,0,0,0)), rgba(0,0,0,0), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
+        'gradient-image-bottom': 'linear-gradient(to bottom, rgba(3, 7, 18, 0.9), rgba(0,0,0,0)), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
+        'gradient-image-top': 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(3, 7, 18, 0.9)), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
+        'gradient-image-both': 'linear-gradient(to bottom, rgba(3, 7, 18, 0.9), rgba(3, 7, 18, 0.9)), url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")',
       },
       screens: {
         'xs': '524px',

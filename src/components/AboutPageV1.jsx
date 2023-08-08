@@ -5,9 +5,8 @@ import Eco_Archive from "../assets/Eco_Archive.png";
 // import Dashboard from "../assets/Dashboard.mp4";
 import Tables2 from "../assets/Tables2.mp4";
 import Dashboard3 from "../assets/Dashboard3.mp4";
-import DashboardPhoto from "../assets/DashPhoto.jpg";
-import Tables from "../assets/Tables.mp4";
-// import GitHub from "../assets/GitHub.png";
+import ProjectFrame from './ProjectFrame';
+
 
 
 function AboutPage() {
@@ -20,15 +19,44 @@ function AboutPage() {
 
     // const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [0, 0.5, 1])
 
+    // Pargraph Props
+    const frame1Par1 = ` Eco Archive is a full-stack React-based web application that leverages MySQL to 
+        produce an efficient database management system for recycling depots, 
+        with a central REST API powered by Node.js and Express.
+    `;
+
+    const frame1Par2 = `
+        This project seeks to elevate organizational information management capabilities,
+        enabling measurable outcomes while also enhancing service accessibility for customers.
+        Customers can also double down on sustainability by donating their earnings to charity.
+    `;
+
+    const frame2Par1 = `
+    Toy Haven is a vibrant online platform that showcases a diverse range of toys, 
+    catering to the interests of children of all ages. Utilizing cutting-edge web technologies, 
+    Toy Haven provides an immersive browsing experience, with an intuitive interface powered by React. 
+    The backend infrastructure is fortified by Node.js and Express, ensuring seamless interactions and quick access to the extensive toy catalog.
+    `;
+
+    const frame2Par2 = `
+    Through this innovative project, we aim to not only offer a comprehensive selection of toys but also promote play-based learning and creativity among children.
+    Additionally, Toy Haven supports charitable initiatives, 
+    allowing customers to contribute a portion of their purchases to various causes that resonate with their values.
+    `;
+
+
+
+
+    // Framer content
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
 
     const [slideNum, setSlideNum] = useState(0);
 
-    useEffect(() => {
-        console.log("after: ", slideNum);
-    }, [slideNum]);
+    // useEffect(() => {
+    //     console.log("after: ", slideNum);
+    // }, [slideNum]);
 
     function handleRightArrow() {
         if (slideNum >= 1) {
@@ -65,7 +93,7 @@ function AboutPage() {
                 </div> */}
 
                 <section className='lg:block hidden'>
-                    <div className='absolute filter mix-blend-plus- opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-bottom'></div>
+                    <div className='absolute filter mix-blend-plus- opacity-25 w-full h-[263px] bg-cover bg-center bg-gradient-image-both'></div>
 
                     {/* Comet */}
                     <div className="sm:h-48 sm:static h-0 overflow-hidden relative">
@@ -92,130 +120,30 @@ function AboutPage() {
                 </div>
 
                 <section>
-                    <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-both'></div>
-
                     {/* Personal Projects */}
                     <h1 className='relative flex justify-start sm:p md:mx-32 mx-3 my-3 sm:text-5xl text-4xl font-bold tracking-wide '>PERSONAL PROJECTS</h1>
 
-                    <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'
-                        ref={ref}>
-                        {/* <div className='bg-sate-200 bg-opacity-10 min-h-fit backdrop-filter backdrop-blur-sm rounded-lg shadow-xl z-2 brder borer-slate-700'> */}
-
-                        {/* Eco_Archive */}
-                        <div className='relative'
-                            style={{
-                                transform: isInView ? "none" : "translateX(-200px)",
-                                opacity: isInView ? 1 : 0,
-                                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                            }}
-                        >
-                            <div className='absolute inset-10 opacity-70 bg-gradient-to-r from-blue-400 to-violet-400 rounded-full blur-2xl'></div>
-                            <div className='relative bg-opacity-25 h-full backdrop-filter backdrop-blur-3xl rounded-lg shadow-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
-                                <span className='flex flex-col justify-start xl:m-10 m-6'>
-                                    <div className='flex flex-row justify-between'>
-                                        <div className='flex flex-row justify-start'>
-                                            <h2 className='text-3xl pr-2 font-mono font-bold text-slate-200'>Eco Archive</h2>
-                                            <a href="https://github.com/anthonyjdam/Eco_Archive"
-                                                target="_blank" rel="noopener noreferrer"
-                                            >
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-9">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <img src={Eco_Archive} className='h-8 w-8 mr-3' />
-                                    </div>
-                                    <div className='flex flex-row pt-1'>
-                                        <h3 className='text-blue-300 bg-blue-200 bg-opacity-10 px-1.5 rounded-full mr-2'>React.js</h3>
-                                        <h3 className='text-amber-100 bg-amber-50 bg-opacity-10 px-1.5 rounded-full mr-2'>SQL</h3>
-                                        <h3 className='text-sky-200 bg-sky-200 bg-opacity-10 px-1.5 rounded-full mr-2'>TailwindCSS</h3>
-                                    </div>
-                                    {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
-                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-
-                                        Developed a full-stack web application with a database management system using MySQL to retrofit legacy information storage processes,
-                                        enhancing data security, efficiency and accessibility for both organizational operations and customer interactions. The goal was to ...address these challenges..
-                                        and enable users to make actionable and insightful decisions on managing the recycling depot. Also, talk about charity. THis project challenged
-                                        me to learn...
-                                    </p>
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Eco_Archive Video */}
-                        <motion.div className='min-h-full h-full w-full relative'
-                            style={{
-                                transform: isInView ? "none" : "translateX(200px)",
-                                opacity: isInView ? 1 : 0,
-                                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                            }}
-                        >
-                            <div className='relative'>
-                                {slideNum == 0 &&
-                                    <video autoPlay loop muted
-                                        className='relative h-full w-full rounded-lg'
-                                    >
-                                        <source src={Dashboard3} type="video/mp4" />
-                                    </video>
-                                }
-                                {/* {slideNum == 0 &&
-                                    <img className='relative xs:hidden block h-full w-full rounded-lg border border-gray-900 border-t-slate-700 border-r-slate-700'
-                                        src={Dashboard4}
-                                    >
-                                    </img>
-                                } */}
-                                {slideNum == 1 &&
-                                    <video autoPlay loop muted
-                                        className='relative h-full w-full rounded-lg'
-                                    >
-                                        <source src={Tables2} type="video/mp4" />
-                                    </video>
-                                }
-
-                                {/* Right Button */}
-                                <div className='absolute top-1/2 right-2 -translate-y-1/2'>
-                                    <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
-                                            sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={(e) => {
-                                            console.log("before: ", slideNum);
-                                            handleRightArrow();
-                                        }}
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                        </svg>
-                                    </button>
-                                </div>
-
-                                {/* Left Button */}
-                                <div className='absolute top-1/2 left-2 -translate-y-1/2'>
-                                    <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
-                                                        sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={(e) => {
-                                            console.log("before: ", slideNum);
-                                            handleLeftArrow();
-                                        }}
-                                    >
-                                        <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* Toy Store */}
-                        <div className='relative bg-slate-900 min-h-fit backdrop-filter backdrop-blur-sm rounded-lg shadow-xl border border-slate-700'>
-                            <h2 className='relative flex justify-start m-3 text-3xl font-mono font-bold text-blue-400'>Toy Store Java Application</h2>
-                            <p className='m-3'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sequi eaque dolores nisi omnis impedit soluta minus,
-                                vel officiis illo nihil ipsum aperiam, corrupti assumenda commodi sit aut perspiciatis beatae.
-                            </p>
-                        </div>
-                        <div className='min-h-fit'>
-                            <h1 className=' font-extrabold'>Video Placeholder</h1>
-                        </div>
+                    <div className='relative'>
+                        <div className='absolute filter mix-blend-plus- opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
+                        <ProjectFrame
+                            video1={Dashboard3}
+                            video2={Tables2}
+                            paragraph1={frame1Par1}
+                            paragraph2={frame1Par2}
+                            logo={Eco_Archive}
+                            color1="from-blue-400"
+                            color2="to-violet-400"
+                        />
                     </div>
+                    <ProjectFrame
+                        video1={Dashboard3}
+                        video2={Tables2}
+                        paragraph1={frame2Par1}
+                        paragraph2={frame2Par2}
+                        logo={Eco_Archive}
+                        color1="from-indigo-300"
+                        color2="to-blue-400"
+                    />
 
 
                 </section>
@@ -238,12 +166,12 @@ function AboutPage() {
                         className='absolute filter mix-blend-soft-light opacity-75 w-screen h-screen bg-cover bg-center' /> */}
                     <div className='absolute top-24 scale-x-150 w-full h-screen rounded-t-full  blur-2xl bg-cyan-800 '>
                     </div>
-                    <div className='absolute top-36 scale-x-150 w-full h-screen rounded-t-full  blur-2xl bg-violet-900'>
+                    <div className='absolute top-32 scale-x-150 w-full h-screen rounded-t-full  blur-2xl bg-violet-900'>
                     </div>
                     <div className='relative top-32 scale-x-150 w-full h-screen rounded-t-full 
                                     bg-gradient-to-b from-gray-900 to-gray-950 border-2 border-opacity-75 border-blue-400 text-white flex justify-center items-center'>
                         <img src="https://www.solarsystemscope.com/textures/download/2k_haumea_fictional.jpg"
-                            className='absolute filter mix-blend-soft-light opacity-10 w-screen h-screen rounded-t-full' />
+                            className='absolute filter mix-blend-soft-light opacity-[16%] w-screen h-screen rounded-t-full' />
                     </div>
                     {/* https://c4.wallpaperflare.com/wallpaper/566/308/22/landed-on-outer-earth-wallpaper-preview.jpg
                     https://w7.pngwing.com/pngs/691/438/png-transparent-desktop-blue-space-nebula-space-texture-blue-atmosphere.png 

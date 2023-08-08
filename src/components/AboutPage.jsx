@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import ProjectsPage from './LandingPage/ProjectsPage'
 import { useInView, motion } from "framer-motion";
 import Eco_Archive from "../assets/Eco_Archive.png";
+import ToyStore from "../assets/ToyStore.jpg";
+import AddToy from "../assets/AddToy.png";
+import SearchBuy from "../assets/SearchBuy.png";
+import RemoveToy from "../assets/RemoveToy.png";
 // import Dashboard from "../assets/Dashboard.mp4";
 import Tables2 from "../assets/Tables2.mp4";
 import Dashboard3 from "../assets/Dashboard3.mp4";
@@ -96,7 +100,7 @@ function AboutPage() {
                 <section className='relative'>
                     {/* Personal Projects */}
                     <h1 className='relative flex justify-start sm:p md:mx-32 mx-3 my-3 sm:text-5xl text-4xl font-bold tracking-wide '>PERSONAL PROJECTS</h1>
-                    
+
                     <div className='absolute filter mix-blend-plus- opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
 
                     <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'
@@ -125,7 +129,11 @@ function AboutPage() {
                                                 </svg>
                                             </a>
                                         </div>
-                                        <img src={Eco_Archive} className='h-8 w-8 mr-3' />
+                                        <a href="https://github.com/anthonyjdam/Eco_Archive"
+                                            target="_blank" rel="noopener noreferrer"
+                                        >
+                                            <img src={Eco_Archive} className='h-8 w-8 mr-3' />
+                                        </a>
                                     </div>
                                     <div className='flex flex-row pt-1'>
                                         <h3 className='text-blue-300 bg-blue-200 bg-opacity-10 px-1.5 rounded-full mr-2'>React</h3>
@@ -149,7 +157,7 @@ function AboutPage() {
                         {/* Eco_Archive Video */}
                         <motion.div className='min-h-full h-full w-full relative'
                             style={{
-                                transform: isInView ? "none" : "translateX(200px)",
+                                transform: isInView ? "none" : "translateX(-400px)",
                                 opacity: isInView ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
@@ -207,104 +215,106 @@ function AboutPage() {
 
                 <section className='relative'>
                     <div className='absolute filter mix-blend-plus opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
-                        <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'
-                            ref={ref2}>
+                    <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'
+                        ref={ref2}>
 
-                            {/* Toy Store */}
-                            <div className='relative'
-                                style={{
-                                    transform: isInView2 ? "none" : "translateX(-200px)",
-                                    opacity: isInView2 ? 1 : 0,
-                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                                }}
-                            >
-                                <div className='absolute inset-16 opacity-70 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full blur-2xl'></div>
-                                <div className='relative bg-opacity-25 h-full backdrop-filter backdrop-blur-3xl rounded-lg shadow-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
-                                    <span className='flex flex-col justify-start xl:m-10 m-6'>
-                                        <div className='flex flex-row justify-between'>
-                                            <div className='flex flex-row justify-start'>
-                                                <h2 className='text-3xl pr-2 font-mono font-bold text-slate-200'>Eco Archive</h2>
-                                                <a href="https://github.com/anthonyjdam/Eco_Archive"
-                                                    target="_blank" rel="noopener noreferrer"
-                                                >
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-9">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                            <img className='h-8 w-8 mr-3' />
+                        {/* Toy Store */}
+                        <div className='relative'
+                            style={{
+                                transform: isInView2 ? "none" : "translateX(400px)",
+                                opacity: isInView2 ? 1 : 0,
+                                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                            }}
+                        >
+                            <div className='absolute inset-16 opacity-70 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full blur-2xl'></div>
+                            <div className='relative bg-opacity-25 h-full backdrop-filter backdrop-blur-3xl rounded-lg shadow-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
+                                <span className='flex flex-col justify-start xl:m-10 m-6'>
+                                    <div className='flex flex-row justify-between'>
+                                        <div className='flex flex-row justify-start'>
+                                            <h2 className='text-3xl pr-2 font-mono font-bold text-slate-200'>Toy Store</h2>
+                                            <a href="https://github.com/jRaimuu/Toy_Store"
+                                                target="_blank" rel="noopener noreferrer"
+                                            >
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-9">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                                                </svg>
+                                            </a>
                                         </div>
-                                        <div className='flex flex-row pt-1'>
-                                            <h3 className='text-red-300 bg-red-200 bg-opacity-10 px-1.5 rounded-full mr-2'>Java</h3>
-                                        </div>
-                                        {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
-                                        <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                            Toy
-                                        </p>
-                                        <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                            Through 
-                                        </p>
-                                    </span>
+                                        <a href="https://github.com/jRaimuu/Toy_Store"
+                                            target="_blank" rel="noopener noreferrer"
+                                        >
+                                            <img src={ToyStore} className='h-8 w-8 mr-3 rounded-lg' />
+                                        </a>
+                                    </div>
+                                    <div className='flex flex-row pt-1'>
+                                        <h3 className='text-red-300 bg-red-200 bg-opacity-10 px-1.5 rounded-full mr-2'>Java</h3>
+                                    </div>
+                                    {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
+                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' >
+                                        Toy
+                                    </p>
+                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' >
+                                        Through
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        {/* Toy Store Video */}
+                        <motion.div className='min-h-full h-full w-full relative'
+                            style={{
+                                transform: isInView2 ? "none" : "translateX(400px)",
+                                opacity: isInView2 ? 1 : 0,
+                                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                            }}
+                        >
+                            <div className='relative'>
+                                {slideNum == 0 &&
+                                    <img src={SearchBuy}
+                                        className='relative h-full w-full rounded-lg'
+                                    >
+                                    </img>
+                                }
+                                {slideNum == 1 &&
+                                    <img src={AddToy}
+                                        className='relative h-full w-full rounded-lg'
+                                    >
+                                    </img>
+                                }
+
+                                {/* Right Button */}
+                                <div className='absolute top-1/2 right-2 -translate-y-1/2'>
+                                    <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
+                                            sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
+                                        onClick={(e) => {
+                                            console.log("before: ", slideNum);
+                                            handleRightArrow();
+                                        }}
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                {/* Left Button */}
+                                <div className='absolute top-1/2 left-2 -translate-y-1/2'>
+                                    <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
+                                                        sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
+                                        onClick={(e) => {
+                                            console.log("before: ", slideNum);
+                                            handleLeftArrow();
+                                        }}
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
-
-
-                            {/* Toy Store Video */}
-                            <motion.div className='min-h-full h-full w-full relative'
-                                style={{
-                                    transform: isInView2 ? "none" : "translateX(200px)",
-                                    opacity: isInView2 ? 1 : 0,
-                                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                                }}
-                            >
-                                <div className='relative'>
-                                    {slideNum == 0 &&
-                                        <video autoPlay loop muted
-                                            className='relative h-full w-full rounded-lg'
-                                        >
-                                            <source src={Dashboard3} type="video/mp4" />
-                                        </video>
-                                    }
-                                    {slideNum == 1 &&
-                                        <video autoPlay loop muted
-                                            className='relative h-full w-full rounded-lg'
-                                        >
-                                            <source src={Tables2} type="video/mp4" />
-                                        </video>
-                                    }
-
-                                    {/* Right Button */}
-                                    <div className='absolute top-1/2 right-2 -translate-y-1/2'>
-                                        <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
-                                            sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                            onClick={(e) => {
-                                                console.log("before: ", slideNum);
-                                                handleRightArrow();
-                                            }}
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    {/* Left Button */}
-                                    <div className='absolute top-1/2 left-2 -translate-y-1/2'>
-                                        <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
-                                                        sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                            onClick={(e) => {
-                                                console.log("before: ", slideNum);
-                                                handleLeftArrow();
-                                            }}
-                                        >
-                                            <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </div>
+                        </motion.div>
+                    </div>
                 </section>
 
 

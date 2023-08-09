@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-import ProjectsPage from './LandingPage/ProjectsPage'
 import { useInView, motion } from "framer-motion";
+import ProjectsPage from './LandingPage/ProjectsPage'
 import Eco_Archive from "../assets/Eco_Archive.png";
 import ToyStore from "../assets/ToyStore.jpg";
 import AddToy from "../assets/AddToy.png";
 import SearchBuy from "../assets/SearchBuy.png";
 import RemoveToy from "../assets/RemoveToy.png";
-// import Dashboard from "../assets/Dashboard.mp4";
+import ToyStoreThumbnail from "../assets/ToyStoreThumbnail.png";
 import Tables2 from "../assets/Tables2.mp4";
 import Dashboard3 from "../assets/Dashboard3.mp4";
 
@@ -28,28 +28,12 @@ function AboutPage() {
     const ref2 = useRef(null);
     const isInView2 = useInView(ref2, { once: true });
 
+    const [slideNum1, setSlideNum1] = useState(0);
+    const [slideNum2, setSlideNum2] = useState(0);
 
-    const [slideNum, setSlideNum] = useState(0);
-
-    // useEffect(() => {
-    //     console.log("after: ", slideNum);
-    // }, [slideNum]);
-
-    function handleRightArrow() {
-        if (slideNum >= 1) {
-            setSlideNum(0);
-        } else {
-            setSlideNum(slideNum + 1);
-        }
-    }
-
-    function handleLeftArrow() {
-        if (slideNum <= 0) {
-            setSlideNum(1);
-        } else {
-            setSlideNum(slideNum - 1);
-        }
-    }
+    useEffect(() => {
+        console.log(slideNum2);
+    }, [slideNum2])
 
     return (
         <>
@@ -163,14 +147,14 @@ function AboutPage() {
                             }}
                         >
                             <div className='relative'>
-                                {slideNum == 0 &&
+                                {slideNum1 == 0 &&
                                     <video autoPlay loop muted
                                         className='relative h-full w-full rounded-lg'
                                     >
                                         <source src={Dashboard3} type="video/mp4" />
                                     </video>
                                 }
-                                {slideNum == 1 &&
+                                {slideNum1 == 1 &&
                                     <video autoPlay loop muted
                                         className='relative h-full w-full rounded-lg'
                                     >
@@ -182,10 +166,9 @@ function AboutPage() {
                                 <div className='absolute top-1/2 right-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                             sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={(e) => {
-                                            console.log("before: ", slideNum);
-                                            handleRightArrow();
-                                        }}
+                                        onClick={() => setSlideNum1((slideNum1 + 1) % 2)}
+
+
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -197,10 +180,7 @@ function AboutPage() {
                                 <div className='absolute top-1/2 left-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                                         sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={(e) => {
-                                            console.log("before: ", slideNum);
-                                            handleLeftArrow();
-                                        }}
+                                        onClick={() => setSlideNum1((slideNum1 - 1 + 2) % 2)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -215,7 +195,7 @@ function AboutPage() {
 
                 <section className='relative'>
                     <div className='absolute filter mix-blend-plus opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
-                    <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'
+                    <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-16 md:h-fit h-full'
                         ref={ref2}>
 
                         {/* Toy Store */}
@@ -251,10 +231,14 @@ function AboutPage() {
                                     </div>
                                     {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        Toy
+                                        This project seeks to elevate organizational information management capabilities,
+                                        enabling measurable outcomes while also enhancing service accessibility for customers.
+                                        Customers can also double down on sustainability by donating their earnings to charity.
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        Through
+                                        This project seeks to elevate organizational information management capabilities,
+                                        enabling measurable outcomes while also enhancing service accessibility for customers.
+                                        Customers can also double down on sustainability by donating their earnings to charity.
                                     </p>
                                 </span>
                             </div>
@@ -270,27 +254,35 @@ function AboutPage() {
                             }}
                         >
                             <div className='relative'>
-                                {slideNum == 0 &&
+                                {/* {slideNum2 == 0 &&
+                                    <img src={ToyStoreThumbnail}
+                                        className='relative h-full w-full rounded-lg  opacity-90 hover:opacity-100'
+                                    >
+                                    </img>
+                                } */}
+                                {slideNum2 == 0 &&
                                     <img src={SearchBuy}
                                         className='relative h-full w-full rounded-lg'
                                     >
                                     </img>
                                 }
-                                {slideNum == 1 &&
+                                {slideNum2 == 1 &&
                                     <img src={AddToy}
                                         className='relative h-full w-full rounded-lg'
                                     >
                                     </img>
                                 }
-
+                                {slideNum2 == 2 &&
+                                    <img src={RemoveToy}
+                                        className='relative h-full w-full rounded-lg'
+                                    >
+                                    </img>
+                                }
                                 {/* Right Button */}
                                 <div className='absolute top-1/2 right-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                             sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={(e) => {
-                                            console.log("before: ", slideNum);
-                                            handleRightArrow();
-                                        }}
+                                        onClick={() => setSlideNum2((slideNum2 + 1) % 3)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -301,13 +293,10 @@ function AboutPage() {
                                 {/* Left Button */}
                                 <div className='absolute top-1/2 left-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
-                                                        sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={(e) => {
-                                            console.log("before: ", slideNum);
-                                            handleLeftArrow();
-                                        }}
+                                        sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
+                                        onClick={() => setSlideNum2((slideNum2 - 1 + 3) % 3)}
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-6 text-gray-400">
+                                        <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                                         </svg>
                                     </button>

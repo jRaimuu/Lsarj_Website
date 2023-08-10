@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import ProjectsPage from './LandingPage/ProjectsPage'
+import ProjectsPage from './AboutPage'
 import { useInView, motion } from "framer-motion";
 import Eco_Archive from "../assets/Eco_Archive.png";
 // import Dashboard from "../assets/Dashboard.mp4";

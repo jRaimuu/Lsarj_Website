@@ -4,7 +4,7 @@ import Spline from "@splinetool/react-spline";
 import NavigationBar from "../NavigationBar";
 import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
 import AboutPage from "../AboutPage";
-import ProjectsPage from "./ProjectsPage";
+import ProjectsPage from "../ProjectsPage";
 import { useInView } from "react-intersection-observer";
 
 function MainPageV2() {
@@ -153,7 +153,7 @@ function MainPageV2() {
       </main>
 
 
-      <AboutPage />
+      <ProjectsPage />
     </>
   );
 }

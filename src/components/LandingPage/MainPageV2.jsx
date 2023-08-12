@@ -22,7 +22,8 @@ function MainPageV2() {
       <NavigationBar />
 
       {/* <main className="bg-gray-950 min-h-screen h-full min-w-full w-screen"> */}
-      <main className="bg-gray-950 min-w-fit h-screen lg:min-h-screen min-h-[800px] w-screen max-w-full overflow-hidden">
+      <main className="bg-gray-950 min-w-fit h-screen lg:min-h-screen min-h-[800px] w-screen max-w-full overflow-hidden"
+            id="home">
 
         {/* <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
             className='absolute filter mix-blend-plus-lighter opacity-[100%] -scale-x-100 w-screen h-screen' /> */}
@@ -32,7 +33,7 @@ function MainPageV2() {
         >
         </div> */}
 
-        <div className='absolute filter mix-blend-plus- opacity-40 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
+        <div className='absolute filter mix-blend-plus- opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
 
 
         {/* <div className='fixed w-blurW h-32 border border-t-transparent bg-sky-400 mix-blend-plus-lighter rounded-full filter blur-3xl opacity-40 '></div> */}
@@ -110,7 +111,7 @@ function MainPageV2() {
           {/* Node Graph */}
           {/* -bottom-20 */}
           <div className="relative flex justify-center">
-            <div className="absolute md:-bottom-20 bottom-0 md:w-80 w-44 md:h-80 h-44 bg-violet-400  rounded-full blur-2xl opacity-20"
+            <div className="absolute md:-bottom-[75px] bottom-0 md:w-80 w-44 md:h-80 h-44 bg-violet-400  rounded-full blur-2xl opacity-20"
             >
             </div>
             {/* <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-64 z-10 lg:w-blurW lg:h-blurH2"> */}
@@ -154,6 +155,8 @@ function MainPageV2() {
 
 
       <ProjectsPage />
+      <AboutPage/>
+
     </>
   );
 }

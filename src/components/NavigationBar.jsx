@@ -41,7 +41,8 @@ function NavigationBar() {
                     bg-violet-400 rounded-full justify- filter blur-3xl opacity-70"
                     >
                     </div>
-                    <button className="text-zinc-500 rounded-full hover:text-zinc-50 hover:bg-zinc-800"
+                    <a href='#home'
+                        className="text-zinc-500 rounded-full hover:text-zinc-50 hover:bg-zinc-800"
                         onMouseOver={() => {
                             setHome("/home")
                         }}
@@ -50,8 +51,9 @@ function NavigationBar() {
                         }}
                     >
                         {home}
-                    </button>
-                    <button className="text-zinc-500 rounded-full hover:text-zinc-50 hover:bg-zinc-800"
+                    </a>
+                    <a href='#ecoArchive'
+                        className="text-zinc-500 rounded-full hover:text-zinc-50 hover:bg-zinc-800"
                         onMouseOver={() => {
                             setProj("/projects")
                         }}
@@ -60,8 +62,9 @@ function NavigationBar() {
                         }}
                     >
                         {proj}
-                    </button>
-                    <button className="text-zinc-500 rounded-full hover:text-zinc-50 hover:bg-zinc-800"
+                    </a>
+                    <a  href='#about'
+                        className="text-zinc-500 rounded-full hover:text-zinc-50 hover:bg-zinc-800"
                         onMouseOver={() => {
                             setAbout("/about")
                         }}
@@ -70,7 +73,7 @@ function NavigationBar() {
                         }}
                     >
                         {about}
-                    </button>
+                    </a>
                 </div>
             </nav>
         </>

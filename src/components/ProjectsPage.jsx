@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useInView, motion } from "framer-motion";
-import ProjectsPage from './AboutPage'
 import Eco_Archive from "../assets/Eco_Archive.png";
 import ToyStore from "../assets/ToyStore.jpg";
 import AddToy from "../assets/AddToy.png";
@@ -12,7 +11,7 @@ import Dashboard3 from "../assets/Dashboard3.mp4";
 
 
 
-function AboutPage() {
+function ProjectsPage() {
 
     // const targetRef = useRef(null);
     // const { scrollYProgress } = useScroll({
@@ -83,7 +82,10 @@ function AboutPage() {
 
 
                 {/* Eco_Archive */}
-                <section className='relative'>
+                <section
+                    id="ecoArchive"
+                    className='relative'
+                >
                     {/* Personal Projects */}
                     <h1 className='relative flex justify-start sm:p md:mx-32 mx-3 my-3 sm:text-5xl text-4xl font-bold tracking-wide '>PERSONAL PROJECTS</h1>
 
@@ -194,7 +196,10 @@ function AboutPage() {
 
 
                 {/* Toy Store */}
-                <section className='relative'>
+                <section 
+                    id="#toyStore"
+                    className='relative'
+                >
                     <div className='absolute filter mix-blend-plus opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
                     <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-20 md:h-fit h-full'
                         ref={ref2}>
@@ -231,14 +236,12 @@ function AboutPage() {
                                     </div>
                                     {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        This project seeks to elevate organizational information management capabilities,
-                                        enabling measurable outcomes while also enhancing service accessibility for customers.
-                                        Customers can also double down on sustainability by donating their earnings to charity.
+                                        This Toy Store Java application is designed to assist users in purchasing, searching, adding, and removing products from a store inventory.
+                                        It handles inventory product information by parsing the data from a CSV text file,  performing CRUD operations, and presenting it through a user-friendly JavaFX interface.
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        This project seeks to elevate organizational information management capabilities,
-                                        enabling measurable outcomes while also enhancing service accessibility for customers.
-                                        Customers can also double down on sustainability by donating their earnings to charity.
+                                        In the implementation of this project, employing MVC design patterns alongside object-oriented programming principles such as encapsulation, abstraction, inheritance, and polymorphism,
+                                        yielded greater design flexibility, simpler code, reduced coupling, and higher cohesion.
                                     </p>
                                 </span>
                             </div>
@@ -343,10 +346,9 @@ function AboutPage() {
                 </div> */}
             </main>
 
-            <ProjectsPage />
 
         </>
     )
 }
 
-export default AboutPage
+export default ProjectsPage

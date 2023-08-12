@@ -16,6 +16,19 @@ function MainPageV2() {
 
   const { ref, inView } = useInView({ triggerOnce: true });
 
+  function handleOnHover(e) {
+    e.preventDefault();
+    if (e.target.name === 'Sphere1') {
+      console.log("Hovered");
+      // setTimeout(() => {
+        window.location.href = `${window.location.origin}${window.location.pathname}#ecoArchive`;
+      // }, 1000);
+    }
+    // else {
+    //   console.log(e.target.name);
+    // }
+  }
+
   return (
     <>
 
@@ -23,7 +36,7 @@ function MainPageV2() {
 
       {/* <main className="bg-gray-950 min-h-screen h-full min-w-full w-screen"> */}
       <main className="bg-gray-950 min-w-fit h-screen lg:min-h-screen min-h-[800px] w-screen max-w-full overflow-hidden"
-            id="home">
+        id="home">
 
         {/* <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
             className='absolute filter mix-blend-plus-lighter opacity-[100%] -scale-x-100 w-screen h-screen' /> */}
@@ -119,9 +132,18 @@ function MainPageV2() {
               ref={ref}
               className="absolute w-[500px] h-[500px] z-10 md:w-blurW md:h-blurH2 -bottom-36 md:-bottom-64"
             >
-              {inView && (
-                <Spline scene="https://draft.spline.design/IGkZ5PqnKyTs5cPN/scene.splinecode" />
-              )}
+
+
+              <Spline scene="https://draft.spline.design/N3uVRI-ZF4xEuVId/scene.splinecode"
+                onClick={(e) => {
+                  // handleOnHover(e);
+                }}
+
+              />
+
+
+              {/* {inView && ( */}
+              {/* )} */}
             </div>
           </div>
         </div>
@@ -155,7 +177,7 @@ function MainPageV2() {
 
 
       <ProjectsPage />
-      <AboutPage/>
+      <AboutPage />
 
     </>
   );

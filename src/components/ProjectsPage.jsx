@@ -197,7 +197,7 @@ function ProjectsPage() {
 
                 {/* Toy Store */}
                 <section 
-                    id="#toyStore"
+                    id="toyStore"
                     className='relative'
                 >
                     <div className='absolute filter mix-blend-plus opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
@@ -241,7 +241,7 @@ function ProjectsPage() {
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
                                         In the implementation of this project, employing MVC design patterns alongside object-oriented programming principles such as encapsulation, abstraction, inheritance, and polymorphism,
-                                        yielded greater design flexibility, simpler code, reduced coupling, and higher cohesion.
+                                        led to greater design flexibility, simpler code, reduced coupling, and higher cohesion.
                                     </p>
                                 </span>
                             </div>

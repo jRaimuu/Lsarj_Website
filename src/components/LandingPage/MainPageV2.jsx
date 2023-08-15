@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 function MainPageV2() {
 
   const [text] = useTypewriter({
-    words: ['Computer Science Student', 'Developer', 'Designer', "Tech Enthusiast"],
+    words: ['Computer Science Student', 'Developer', 'Designer'],
     loop: {},
   })
 
@@ -134,7 +134,7 @@ function MainPageV2() {
             >
 
 
-              <Spline scene="https://draft.spline.design/N3uVRI-ZF4xEuVId/scene.splinecode"
+              <Spline scene="https://draft.spline.design/cb8hUy9iEUVSQZHn/scene.splinecode"
                 onClick={(e) => {
                   // handleOnHover(e);
                 }}

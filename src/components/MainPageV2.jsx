@@ -1,11 +1,14 @@
 import React from "react";
-import AboutPageV1 from "../AboutPageV1";
 import Spline from "@splinetool/react-spline";
-import NavigationBar from "../NavigationBar";
+import NavigationBar from "./NavigationBar";
 import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
-import AboutPage from "../AboutPage";
-import ProjectsPage from "../ProjectsPage";
+import AboutPage from "./AboutPage";
+import ProjectsPage from "./ProjectsPage";
 import { useInView } from "react-intersection-observer";
+import EndFooter from "./EndFooter";
+import MoonTexture from "../assets/MoonTexture.png";
+import ColorStreak from "../assets/ColorStreak.png";
+
 
 function MainPageV2() {
 
@@ -16,19 +19,6 @@ function MainPageV2() {
 
   const { ref, inView } = useInView({ triggerOnce: true });
 
-  function handleOnHover(e) {
-    e.preventDefault();
-    if (e.target.name === 'Sphere1') {
-      console.log("Hovered");
-      // setTimeout(() => {
-        window.location.href = `${window.location.origin}${window.location.pathname}#ecoArchive`;
-      // }, 1000);
-    }
-    // else {
-    //   console.log(e.target.name);
-    // }
-  }
-
   return (
     <>
 
@@ -38,21 +28,9 @@ function MainPageV2() {
       <main className="bg-gray-950 min-w-fit h-screen lg:min-h-screen min-h-[800px] w-screen max-w-full overflow-hidden"
         id="home">
 
-        {/* <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
-            className='absolute filter mix-blend-plus-lighter opacity-[100%] -scale-x-100 w-screen h-screen' /> */}
-        {/* <div
-          className='absolute filter mix-blend-plus-lighter opacity-[25%] w-full h-screen bg-cover bg-center
-                    bg-[linear-gradient(to_top,rgba(13,13,13,127),rgba(0,0,0,0)),url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")]'
-        >
-        </div> */}
-
         <div className='absolute filter mix-blend-plus- opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-top'></div>
 
-
-        {/* <div className='fixed w-blurW h-32 border border-t-transparent bg-sky-400 mix-blend-plus-lighter rounded-full filter blur-3xl opacity-40 '></div> */}
-
         {/* Corner Stars */}
-        {/* changed from fixed to relative */}
         <div className="flex relative overflow-x-visible justify-center items-center">
           <div className="absolute w-6 h-6 top-8 left-32 -skew-x-12 
               bg-white rounded-full blur-sm opacity-60"
@@ -69,15 +47,13 @@ function MainPageV2() {
         </div>
 
         {/* Moon */}
-        {/* changed from fixed to relative */}
         <div className="relative flex justify-end items-center">
           <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
             bg-indigo-200 rounded-full filter blur-sm opacity-60"
           >
-            <img src="https://w7.pngwing.com/pngs/691/438/png-transparent-desktop-blue-space-nebula-space-texture-blue-atmosphere.png"
+            <img src={MoonTexture}
               className='absolute filter mix-blend-difference rotate-12 opacity-100 w-screen h-full rounded-full' />
           </div>
-          {/* bg-violet-200 rounded-full filter blur-2xl opacity-70 mix-blend-lighten hover:animate-animateBlur" */}
           <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
             bg-violet-200 rounded-full blur-2xl opacity-70 hover:animate-animateBlur"
           >
@@ -85,20 +61,10 @@ function MainPageV2() {
           </div>
           <img
             className="absolute top-0 -right-52 rounded-full filter mix-blend-difference opacity-100 blur-2xl bottom-0"
-            src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
+            src={ColorStreak}
           />
 
         </div>
-
-
-        {/* <div className='overflow-hidden flex justify-center items-center fixed'>
-                    <div className=' -top-96 -left-96 sm:w-96 sm:h-96 lg:w-blurW lg:h-blurH2 
-                     bg-indigo-200  rounded-full filter blur-fsm opacity-60 hover:animate-animateBlur'></div>
-                    <div className=' -top-96 -left-96 sm:left-96 sm:-top-64 sm:w-96 sm:h-96 lg:w-blurW lg:h-blurH2
-                     bg-purple-200  rounded-full filter mix-blend-lighten blur-f3xl opacity-70 hover:animate-animateBlur'></div>
-                    {/* <img className='flex filter rounded-full top-0 -left-96'
-                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"/>
-                </div> */}
 
         <div className="relative flex flex-col justify-evenly min-h-screen h-full top-8">
 
@@ -134,7 +100,7 @@ function MainPageV2() {
             >
 
 
-              <Spline scene="https://draft.spline.design/cb8hUy9iEUVSQZHn/scene.splinecode"
+              <Spline scene="https://draft.spline.design/uP58alhiH69oZepU/scene.splinecode"
                 onClick={(e) => {
                   // handleOnHover(e);
                 }}
@@ -148,36 +114,8 @@ function MainPageV2() {
           </div>
         </div>
 
-
-
-        {/* <div>
-          <img
-            className="absolute -left-64 rotate-180 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
-            src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
-          />
-        </div> */}
-
-        {/* <body className="bg-gray-950 h-60">
-          <div>
-            <img
-              className="absolute skew-y-12 skew-x-12 scale-x-50 -bottom-32 -left-[350px] -rotate-180 rounded-full filter blur-2xl mix-blend-difference"
-              src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
-            />
-          </div>
-          <div className="absolute w-16 h-28 left-[410px] -bottom-36 -rotate-45 -skew-y-12 
-              bg-white rounded-full blur-xl opacity-50">
-          </div>
-          <div className="absolute w-6 h-40 left-[410px] -bottom-36 -rotate-45 -skew-y-12 
-              bg-white rounded-full blur-xl opacity-50 ">
-          </div>
-        </body> */}
-
-
       </main>
 
-
-      <ProjectsPage />
-      <AboutPage />
 
     </>
   );

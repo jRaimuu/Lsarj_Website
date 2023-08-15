@@ -5,21 +5,14 @@ import ToyStore from "../assets/ToyStore.jpg";
 import AddToy from "../assets/AddToy.png";
 import SearchBuy from "../assets/SearchBuy.png";
 import RemoveToy from "../assets/RemoveToy.png";
-import ToyStoreThumbnail from "../assets/ToyStoreThumbnail.png";
 import Tables2 from "../assets/Tables2.mp4";
+import Pickup from "../assets/Pickup1.mp4";
 import Dashboard3 from "../assets/Dashboard3.mp4";
+import StarOverlay from "../assets/StarOverlay.png";
 
 
 
 function ProjectsPage() {
-
-    // const targetRef = useRef(null);
-    // const { scrollYProgress } = useScroll({
-    //     target: targetRef,
-    //     offset: ["0 1", "1 1.1"],
-    // });
-
-    // const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [0, 0.5, 1])
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -37,21 +30,6 @@ function ProjectsPage() {
     return (
         <>
             <main className='bg-gray-950 min-h-screen min-w-fit h-full text-white overflow-x-hidden'>
-
-                {/* <div className='absolute bg-gradient-to-b from-gray-900 to-gray-950 filter opacity-[100%] w-screen h-screen bg-cover bg-center '>
-                    <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
-                        className='mix-blend-overlay'
-                    />
-                </div> */}
-
-                {/* <div className='absolute filter mix-blend-plus-lighter opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-bottom'></div> */}
-
-                {/* <div
-                    className='absolute filter mix-blend-plus-lighter opacity-[25%] w-full h-screen bg-cover bg-center
-                    bg-[linear-gradient(to_bottom,rgba(13,13,13,127),rgba(0,0,0,0)),url("https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg")]'
-                >
-                </div> */}
-
 
                 <section className='lg:block hidden'>
                     <div className='absolute filter mix-blend-plus- opacity-25 w-full h-[264px] bg-cover bg-center bg-gradient-image-both'></div>
@@ -75,7 +53,7 @@ function ProjectsPage() {
 
                 {/* Starry Overlay */}
                 <div className='relative opacity-50'>
-                    <img src="https://github.githubassets.com/images/modules/site/home-campaign/bg-stars-1.webp"
+                    <img src={StarOverlay}
                         className="absolute h-[1000px] w-[1250px] -top-80 right-0 lg:inline hidden"
                     />
                 </div>
@@ -130,7 +108,7 @@ function ProjectsPage() {
                                     {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
                                         Eco Archive is a full-stack React-based web application that leverages MySQL to produce an efficient
-                                        database management system for recycling depots, with a central REST API powered by Node.js and Express.
+                                        database management system for recycling depots, with a central <b>REST API</b> powered by <b>Node.js</b> and <b>Express</b>.
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
                                         The goal of this project was to advance recycling depots' information management capabilities through centralized and secure data storage, combined with interactive data visualizations that interpret measureable outcomes.
@@ -163,12 +141,18 @@ function ProjectsPage() {
                                         <source src={Tables2} type="video/mp4" />
                                     </video>
                                 }
-
+                                {slideNum1 == 2 &&
+                                    <video autoPlay loop muted
+                                        className='relative h-full w-full rounded-lg '
+                                    >
+                                        <source src={Pickup} type="video/mp4" />
+                                    </video>
+                                }
                                 {/* Right Button */}
                                 <div className='absolute top-1/2 right-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                             sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={() => setSlideNum1((slideNum1 + 1) % 2)}
+                                        onClick={() => setSlideNum1((slideNum1 + 1) % 3)}
 
 
                                     >
@@ -182,7 +166,7 @@ function ProjectsPage() {
                                 <div className='absolute top-1/2 left-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                                         sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={() => setSlideNum1((slideNum1 - 1 + 2) % 2)}
+                                        onClick={() => setSlideNum1((slideNum1 - 1 + 3) % 3)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -309,41 +293,6 @@ function ProjectsPage() {
                     </div>
                 </section>
 
-
-                {/* <motion.div
-                    transition={{
-                        type: 'tween',
-                        ease: 'easeIn',
-                        duration: 2,
-                    }}
-
-                >
-                    <h1 className='font-extrabold text-6xl h-full bg-slate-500'>YO</h1>
-                </motion.div> */}
-
-                {/* <div className="flex overflow-hidden justify-end items-center">
-                    <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
-            bg-indigo-200 rounded-full filter blur-sm opacity-60"
-                    >
-                    </div>
-                    <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
-            bg-violet-200 rounded-full filter blur-2xl opacity-70 mix-blend-lighten hover:animate-animateBlur"
-                    >
-                    </div>
-                    <img
-                        className="fixed top-0 -right-52 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
-                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
-                    />
-                </div> */}
-
-
-
-                {/* <div>
-                    <img
-                        className="fixed -left-64 rotate-180 rounded-full filter opacity-100 blur-2xl bottom-0 mix-blend-difference"
-                        src="https://tailwindcss.com/_next/static/media/docs-dark@tinypng.1bbe175e.png"
-                    />
-                </div> */}
             </main>
 
 

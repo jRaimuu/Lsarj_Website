@@ -8,30 +8,6 @@ function NavigationBar() {
     const [about, setAbout] = useState("about");
 
 
-    // const [text1] = useTypewriter({
-    //     words: ["home"],
-    //     loop: 1,
-    // });
-
-    // const [text2] = useTypewriter({
-    //     words: ["projects"],
-    //     loop: 1,
-    // });
-
-    // const [text3] = useTypewriter({
-    //     words: ["about"],
-    //     loop: 1,
-    // });
-
-    // useEffect(() => {
-    //     setHome(text1)
-    //     setProj(text2)
-    //     setAbout(text3)
-
-    // }, [text1, text2, text3]);
-
-
-
 
     return (
         <>

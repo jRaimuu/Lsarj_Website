@@ -31,7 +31,7 @@ function AboutPage() {
                         </img>
                     </div>
 
-                    <div className='absolute lg:top-20 sm:top-32 top-24 h-full w-full '>
+                    <div className='absolute lg:top-20 sm:top-32 top-24 h-full w-full'>
                         <div className='relative lg:top-56 sm:top-32 top-24 flex flex-col'>
                             <span className='text-slate-200'>
                                 <div className='md:mx-32 mx-3 my-3 sm:text-5xl text-4xl'>
@@ -44,7 +44,7 @@ function AboutPage() {
                                 </div>
                                 <div className='xs:text-base text-sm md:mx-32 mx-3 my-3'>
                                     <p className='pb-6'>
-                                        I am a enthusiastic student pursuing a degree in <b>Computer Science</b> at the <b>University of Calgary</b>.
+                                        I am a enthusiastic student pursuing a degree in <b>Computer Science</b>.
                                     </p>
                                     <p className='pb-4'>
                                         <b>HOW IT STARTED: </b>

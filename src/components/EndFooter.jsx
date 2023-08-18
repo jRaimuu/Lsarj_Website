@@ -1,6 +1,7 @@
 import React from 'react'
 import GithubLogo from "../assets/GithubLogo.png";
 import LinkedInLogo from "../assets/LinkedInLogo.png";
+import Favicon from "../assets/Favicon.png";
 
 function EndFooter() {
     return (
@@ -15,20 +16,25 @@ function EndFooter() {
                     <div className='relative w-full flex justify-center'>
                         <hr className='w-5/6 p-3 border-1 border-[#182441] border-opacity-100' />
                     </div>
-                    <section className='flex flex-row justify-center align-middle m-1'>
-                        <h3 className='relative mx-3 text-sm font-bold text-cyan-600'>Let's get in touch: </h3>
-                        <a href='https://www.linkedin.com/in/liam-sarjeant-6706021b1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWhBIOQt%2BQ3KeLGUW51piSg%3D%3D'
-                            target="_blank" rel="noopener noreferrer"
-                            className='relative mx-3 h-5 w-5'
-                        >
-                            <img src={LinkedInLogo} />
-                        </a>
-                        <a href='https://github.com/jRaimuu'
-                            target="_blank" rel="noopener noreferrer"
-                            className='relative mx-3 h-5 w-5'
-                        >
-                            <img src={GithubLogo} />
-                        </a>
+                    <section className='flex items-center justify-between sm:mx-32 mx-2 m-1'>
+                        <div className='flex items-center justify-start m-1'>
+                            <h3 className='relative mx-3 text-sm font-bold text-cyan-600'>Let's get in touch: </h3>
+                            <a href='https://www.linkedin.com/in/liam-sarjeant-6706021b1?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWhBIOQt%2BQ3KeLGUW51piSg%3D%3D'
+                                target="_blank" rel="noopener noreferrer"
+                                className='relative mx-3 h-5 w-5'
+                            >
+                                <img src={LinkedInLogo} />
+                            </a>
+                            <a href='https://github.com/jRaimuu'
+                                target="_blank" rel="noopener noreferrer"
+                                className='relative mx-3 h-5 w-5'
+                            >
+                                <img src={GithubLogo} />
+                            </a>
+                        </div>
+                        <div className='flex justify-end'>
+                            <img className='relative mx-3 h-8 w-8 border-2 border-gray-700 rounded-full' src={Favicon} title='Made by Liam Sarjeant' />
+                        </div>
                     </section>
                 </div>
             </footer>

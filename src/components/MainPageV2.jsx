@@ -71,7 +71,7 @@ function MainPageV2() {
           {/* Intro Text */}
           <div className="relative top-0 bottom-0 max-w-xl px-3 mx-auto m-4 pb-16">
             <div className="absolute w-6 h-2 pt-7 xs:ml-[302px] ml-28 xs:mt-1 mt-20 z-10
-            bg-cyan-300 rounded-full blur-sm  animate-pulse"
+            bg-[#84DCCF] rounded-full blur-sm  animate-pulse"
             >
             </div>
             <h1 className="pb-1 font-bold text-7xl tracking-wide text-white">

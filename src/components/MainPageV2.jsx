@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from 'react';
 import Spline from "@splinetool/react-spline";
 import NavigationBar from "./NavigationBar";
 import { useTypewriter, Cursor, Typewriter } from 'react-simple-typewriter';
@@ -18,6 +18,10 @@ function MainPageV2() {
   })
 
   const { ref, inView } = useInView({ triggerOnce: true });
+
+  // const Spline = React.lazy(() =>
+  //   import('@splinetool/react-spline')
+  // );
 
   return (
     <>
@@ -100,16 +104,19 @@ function MainPageV2() {
             >
 
 
-              <Spline scene="https://draft.spline.design/uP58alhiH69oZepU/scene.splinecode"
-                onClick={(e) => {
-                  // handleOnHover(e);
-                }}
-
-              />
-
-
-              {/* {inView && ( */}
-              {/* )} */}
+              {/* <Suspense
+                fallback={
+                  <div>
+                    Loading...
+                  </div>
+                }
+              > */}
+                <Spline scene="https://draft.spline.design/U5D-k6PH9nqJnXSc/scene.splinecode"
+                  onClick={(e) => {
+                    // handleOnHover(e);
+                  }}
+                />
+              {/* </Suspense> */}
             </div>
           </div>
         </div>

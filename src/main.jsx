@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter } from 'react-router-dom'
+import { BrowserRouter, createBrowserRouter } from 'react-router-dom'
 
 // const router = createBrowserRouter([
 // {
@@ -23,6 +23,8 @@ import { createBrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename={"/Lsarj_Website/"}>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 )

@@ -10,7 +10,7 @@ import EndFooter from './components/EndFooter';
 function App() {
   return (
     <>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPageV2 />} />
         </Routes>

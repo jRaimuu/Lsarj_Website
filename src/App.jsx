@@ -10,11 +10,12 @@ import EndFooter from './components/EndFooter';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPageV2 />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <MainPageV2/>
       <ProjectsPage />
       <AboutPage />
       <EndFooter/>

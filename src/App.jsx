@@ -10,9 +10,9 @@ import EndFooter from './components/EndFooter';
 function App() {
   return (
     <>
-      <HashRouter>
+      <HashRouter >
         <Routes>
-          <Route path="/Lsarj_Website/home" element={<MainPageV2 />} />
+          <Route path="/" element={<MainPageV2 />} />
         </Routes>
       </HashRouter>
       {/* <MainPageV2/> */}

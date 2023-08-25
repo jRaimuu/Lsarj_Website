@@ -12,10 +12,10 @@ function App() {
     <>
       <HashRouter basename='/Lsarj_Website'>
         <Routes>
-          <Route path="/Lsarj_Website" />
+          <Route path="/Lsarj_Website" element={<MainPageV2 />} />
         </Routes>
       </HashRouter>
-      <MainPageV2 />
+      {/* <MainPageV2/> */}
       <ProjectsPage />
       <AboutPage />
       <EndFooter />

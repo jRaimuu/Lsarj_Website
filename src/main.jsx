@@ -23,11 +23,6 @@ import { BrowserRouter, HashRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <HashRouter basename='/Lsarj_Website'>
-      <Routes>
-        <Route path="/Lsarj_Website" element={<App />} />
-      </Routes>
-    </HashRouter> */}
     <App />
   </React.StrictMode>,
 )

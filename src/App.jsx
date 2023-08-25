@@ -15,7 +15,7 @@ function App() {
           <Route path="/Lsarj_Website" element={<MainPageV2 />} />
         </Routes>
       </HashRouter>
-      {/* <MainPageV2/> */}
+      <MainPageV2/>
       <ProjectsPage />
       <AboutPage />
       <EndFooter />

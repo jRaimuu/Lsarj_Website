@@ -10,12 +10,12 @@ import EndFooter from './components/EndFooter';
 function App() {
   return (
     <>
-      <HashRouter basename='/'>
+      {/* <HashRouter basename='/'>
         <Routes>
           <Route path="/" element={<MainPageV2 />} />
         </Routes>
-      </HashRouter>
-      {/* <MainPageV2/> */}
+      </HashRouter> */}
+      <MainPageV2/>
       <ProjectsPage />
       <AboutPage />
       <EndFooter/>

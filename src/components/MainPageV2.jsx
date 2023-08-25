@@ -111,7 +111,7 @@ function MainPageV2() {
                   </div>
                 }
               > */}
-                <Spline scene="https://draft.spline.design/U5D-k6PH9nqJnXSc/scene.splinecode"
+                <Spline scene="https://draft.spline.design/QpSIWsg0qt6YJKhn/scene.splinecode"
                   onClick={(e) => {
                     // handleOnHover(e);
                   }}

@@ -81,7 +81,7 @@ function MainPageV2() {
             <h1 className="pb-1 font-bold text-7xl tracking-wide text-white">
               Liam Sarjeant
             </h1>
-            <span className="text-lg font-space py-4 text-violet-400">
+            <span className="text-lg font-mono py-4 text-violet-400">
               {text}
             </span>
             <span className="text-cyan-300 opacity-75">

@@ -128,21 +128,21 @@ function ProjectsPage() {
                         >
                             <div className='relative'>
                                 {slideNum1 == 0 &&
-                                    <video autoPlay loop muted
+                                    <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg '
                                     >
                                         <source src={Dashboard3} type="video/mp4" />
                                     </video>
                                 }
                                 {slideNum1 == 1 &&
-                                    <video autoPlay loop muted
+                                    <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg '
                                     >
                                         <source src={Tables2} type="video/mp4" />
                                     </video>
                                 }
                                 {slideNum1 == 2 &&
-                                    <video autoPlay loop muted
+                                    <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg '
                                     >
                                         <source src={Pickup} type="video/mp4" />

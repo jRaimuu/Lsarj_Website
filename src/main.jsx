@@ -4,22 +4,6 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter, HashRouter } from 'react-router-dom'
 
-// const router = createBrowserRouter([
-// {
-//   path: "/Lsarj_Website/",
-//   element: <App/>,
-//   children: [
-//     {
-//       path: 
-//     }
-
-//   ]
-
-
-
-// }
-// ])
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

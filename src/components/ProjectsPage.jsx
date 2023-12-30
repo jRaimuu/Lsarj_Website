@@ -9,7 +9,7 @@ import Tables2 from "../assets/Tables2.mp4";
 import Pickup from "../assets/Pickup1.mp4";
 import Dashboard3 from "../assets/Dashboard3.mp4";
 import StarOverlay from "../assets/StarOverlay.png";
-
+import StarTexture from "../assets/BGStarTexture.jpg"
 
 
 function ProjectsPage() {
@@ -29,27 +29,8 @@ function ProjectsPage() {
 
     return (
         <>
-            <main className='bg-gray-950 min-h-screen min-w-fit h-full text-white overflow-x-hidden'>
+            <main className='pt-36 bg-gray-950 min-h-screen min-w-fit h-full text-white overflow-x-hidden'>
 
-                <section className='lg:block hidden'>
-                    <div className='absolute filter mix-blend-plus- opacity-25 w-full h-[264px] bg-cover bg-center bg-gradient-image-both'></div>
-
-                    {/* Comet */}
-                    <div className="sm:h-48 sm:static h-0 overflow-hidden relative">
-                        <div className="absolute w-16 h-[500px] left-[200px] -bottom-44 -rotate-45 -skew-y-12 
-                    bg-cyan-800 rounded-full blur-3xl opacity-90 ">
-                        </div>
-                        <div className="absolute w-16 h-80 left-[210px] -bottom-40 -rotate-45 -skew-y-12 
-                    bg-indigo-950 rounded-full blur-2xl opacity-75">
-                        </div>
-                        <div className="absolute w-16 h-28 left-[340px] -bottom-44 -rotate-45 -skew-y-12 
-                    bg-white rounded-full blur-xl opacity-50">
-                        </div>
-                        <div className="absolute w-6 h-32 left-[320px] -bottom-36 -rotate-45 -skew-y-12 
-                    bg-white rounded-full blur-xl opacity-50 filter mix-blend-plus-lighter">
-                        </div>
-                    </div>
-                </section>
 
                 {/* Starry Overlay */}
                 <div className='relative opacity-50'>
@@ -65,23 +46,23 @@ function ProjectsPage() {
                     className='relative'
                 >
                     {/* Personal Projects */}
-                    <h1 className='relative flex justify-start sm:p md:mx-32 mx-3 my-3 sm:text-5xl text-4xl font-bold tracking-wide '>PERSONAL PROJECTS</h1>
+                    <h1 className='sticky top-0 flex justify-start sm:p md:mx-32 mx-3 my-3 sm:text-5xl text-4xl font-bold tracking-wide '>PERSONAL PROJECTS</h1>
 
-                    <div className='absolute filter mix-blend-plus- opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
+                    <div className='absolute opacity-25 w-full h-full bg-cover bg-center'></div>
 
                     <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'
                         ref={ref}>
                         {/* <div className='bg-sate-200 bg-opacity-10 min-h-fit backdrop-filter backdrop-blur-sm rounded-lg shadow-xl z-2 brder borer-slate-700'> */}
 
-                        <div className='relative'
+                        <div className='relative overflow-hidden'
                             style={{
                                 transform: isInView ? "none" : "translateX(-200px)",
                                 opacity: isInView ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
                         >
-                            <div className='absolute inset-10 opacity-70 bg-gradient-to-r from-blue-400 to-violet-400 rounded-full blur-2xl'></div>
-                            <div className='relative bg-opacity-25 h-full backdrop-filter backdrop-blur-3xl rounded-lg shadow-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
+                            <div className='absolute inset-10 opacity-70 bg-gradient-to-r from-blue-400 to-violet-400 rounded-full blur-3xl'></div>
+                            <div className='relative bg-opacity-25 backdrop-blur-lg h-full rounded-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
                                 <span className='flex flex-col justify-start xl:m-10 m-6'>
                                     <div className='flex flex-row justify-between'>
                                         <div className='flex flex-row justify-start'>
@@ -128,21 +109,21 @@ function ProjectsPage() {
                         >
                             <div className='relative'>
                                 {slideNum1 == 0 &&
-                                    <video autoPlay loop muted
+                                    <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg '
                                     >
                                         <source src={Dashboard3} type="video/mp4" />
                                     </video>
                                 }
                                 {slideNum1 == 1 &&
-                                    <video autoPlay loop muted
+                                    <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg '
                                     >
                                         <source src={Tables2} type="video/mp4" />
                                     </video>
                                 }
                                 {slideNum1 == 2 &&
-                                    <video autoPlay loop muted
+                                    <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg '
                                     >
                                         <source src={Pickup} type="video/mp4" />
@@ -184,19 +165,20 @@ function ProjectsPage() {
                     id="toyStore"
                     className='relative'
                 >
-                    <div className='absolute filter mix-blend-plus opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div>
+                    {/* <div className='absolute filter mix-blend-plus opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div> */}
+                    <div className='absolute opacity-25 w-full h-full bg-cover bg-center'></div>
                     <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-20 md:h-fit h-full'
                         ref={ref2}>
 
-                        <div className='relative'
+                        <div className='relative overflow-hidden'
                             style={{
                                 transform: isInView2 ? "none" : "translateX(400px)",
                                 opacity: isInView2 ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
                         >
-                            <div className='absolute inset-16 opacity-70 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full blur-2xl'></div>
-                            <div className='relative bg-opacity-25 h-full backdrop-filter backdrop-blur-3xl rounded-lg shadow-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
+                            <div className='absolute inset-16 opacity-70 bg-gradient-to-r from-indigo-400 to-blue-400 rounded-full blur-3xl'></div>
+                            <div className='relative bg-opacity-25 backdrop-blur-lg h-full rounded-lg border border-gray-900 border-t-slate-700 border-r-slate-700 '>
                                 <span className='flex flex-col justify-start xl:m-10 m-6'>
                                     <div className='flex flex-row justify-between'>
                                         <div className='flex flex-row justify-start'>

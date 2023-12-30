@@ -18,14 +18,16 @@ function AboutPage() {
                     className='relative flex justify-center items-center lg:h-screen sm:h-[50em] h-screen overflow-hidden'
                 >
 
-                    <div className='absolute -scale-x-100 opacity-25 w-full h-screen bg-cover bg-center bg-gradient-image-bottom'></div>
+                    <div className='absolute -scale-x-100 opacity-25 w-full h-screen bg-cover bg-center '></div>
 
                     {/* <img src="https://images.pexels.com/photos/3214110/pexels-photo-3214110.jpeg?cs=srgb&dl=pexels-frank-cone-3214110.jpg&fm=jpg"
                         className='absolute filter mix-blend-soft-light opacity-75 w-screen h-screen bg-cover bg-center' /> */}
-                    <div className='absolute top-24 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-cyan-800 '></div>
-                    <div className='absolute top-32 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-violet-900'></div>
+                    {/* <div className='absolute top-24 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-cyan-800 '></div>
+                    <div className='absolute top-32 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-violet-900'></div> */}
+                    <div className='absolute top-24 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-600 to-violet-900'></div>
+                    
                     <div className='relative top-32 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full 
-                        bg-gradient-to-b from-gray-900 to-gray-950 border-2 border-opacity-75 border-blue-400 text-white flex justify-center items-center'>
+                        bg-gradient-to-b from-gray-900 to-gray-950 border-2 border-opacity-75 saturate-150 border-blue-400 text-white flex justify-center items-center'>
                         <img src={PlanetTexture}
                             className='absolute filter mix-blend-soft-light opacity-[16%] w-screen lg:h-screen sm:h-[50em] h-screen rounded-t-full'>
                         </img>
@@ -44,7 +46,7 @@ function AboutPage() {
                                 </div>
                                 <div className='xs:text-base text-sm md:mx-32 mx-3 my-3'>
                                     <p className='pb-6'>
-                                        I am a enthusiastic student pursuing a degree in <b>Computer Science</b>.
+                                        I'm an enthusiastic student pursuing a degree in <b>Computer Science</b>.
                                     </p>
                                     <p className='pb-4'>
                                         <b>HOW IT STARTED: </b>

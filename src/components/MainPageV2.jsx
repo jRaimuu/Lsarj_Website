@@ -12,7 +12,7 @@ import { motion, useAnimation } from 'framer-motion';
 function MainPageV2() {
 
   const [text] = useTypewriter({
-    words: ['Computer Science Student', 'Developer', 'Designer'],
+    words: ['Computer Science Student', 'Software Developer', 'Problem Solver', 'Designer'],
     loop: {},
   });
 
@@ -115,7 +115,7 @@ function MainPageV2() {
 
             {/* Intro Text */}
             <div className="relative top-0 bottom-0 max-w-xl px-3 mx-auto m-4 pb-16">
-              <div className="absolute w-6 h-2 pt-7 xs:ml-[302px] ml-28 xs:mt-1 mt-20 z-10
+              <div className="absolute w-6 h-2 pt-6 xs:ml-[302px] ml-28 xs:mt-1 -top-1 xs:-top-0 mt-20 z-10
             bg-[#84DCCF] rounded-full blur-sm  animate-pulse"
               >
               </div>
@@ -152,7 +152,7 @@ function MainPageV2() {
                   </div>
                 }
               > */}
-                <Spline scene="https://draft.spline.design/QpSIWsg0qt6YJKhn/scene.splinecode"
+                <Spline scene="https://draft.spline.design/3PsBx3Q9H7YagOGY/scene.splinecode"
                   onClick={(e) => {
                     // handleOnHover(e);
                   }}

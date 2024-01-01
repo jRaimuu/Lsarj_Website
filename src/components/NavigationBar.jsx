@@ -28,7 +28,7 @@ function NavigationBar() {
                     >
                         {home}
                     </a>
-                    <a href='#ecoArchive'
+                    <a href='#openGym'
                         className="text-zinc-500 rounded-full hover:text-zinc-50 hover:bg-zinc-800"
                         onMouseOver={() => {
                             setProj("/projects")

@@ -11,11 +11,13 @@ export default {
       },
       height: {
         "blurH": "32rem",
-        "blurH2": "45rem",
+        "blurH2": "40rem",
+        "moonH": "45rem",
         "nodeGraphH": "24rem"
       },
       width: {
-        "blurW": "45rem",
+        "blurW": "40rem",
+        "moonW": "45rem",
         "nodeGraphW": "24rem"
       },
       backgroundImage: {

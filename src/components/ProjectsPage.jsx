@@ -5,6 +5,7 @@ import ActiveLiving from "../assets/ActiveLiving.jpg";
 import ToyStore from "../assets/ToyStore.jpg";
 import ThematleLogo from "../assets/ThematleLogo.png";
 import ThematleVideo from "../assets/ThematleVideo.mp4";
+import ThematleImg from "../assets/ThematleImg.png";
 import IcalVideo from "../assets/IcalVideo.mp4";
 import OpenGymVideo from "../assets/OpenGymVideo.mp4";
 import AddToy from "../assets/AddToy.png";
@@ -420,7 +421,7 @@ function ProjectsPage() {
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
                         >
-                            <div className='absolute inset-14 opacity-70 bg-gradient-to-br from-cyan-700 via-indigo-400 to-blue-400 rounded-full blur-3xl'></div>
+                            <div className='absolute inset-14 opacity-70 bg-gradient-to-tr from-cyan-700 via-indigo-400 to-blue-400 rounded-full blur-3xl'></div>
                             <div className='relative bg-opacity-25 backdrop-blur-lg h-full rounded-lg border border-gray-900  border-b-slate-700 border-r-slate-700 '>
                                 <span className='flex flex-col justify-start xl:m-10 m-6'>
                                     <div className='flex flex-row justify-between'>
@@ -447,12 +448,16 @@ function ProjectsPage() {
                                     </div>
                                     {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        This Toy Store Java application is designed to assist users in purchasing, searching, adding, and removing products from a store inventory.
-                                        It handles inventory product information by parsing the data from a CSV text file,  performing CRUD operations, and presenting it through a user-friendly JavaFX interface.
+                                        Thematle is a game inspired by the original party game Codenames.
+                                        The objective of Thematle is for one team to successfully uncover all their own secret cards based on the clues given by their Decipherers while avoiding the cards of the opposing team and the neutral cards.
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        In the implementation of this project, employing MVC design patterns alongside object-oriented programming principles such as encapsulation, abstraction, inheritance, and polymorphism,
+                                        The challenge in developing Thematle involved the task of generating words with a higher degree of association more frequently than those with lower association.
+                                        So, at the core of the game lies a JSON file that stores words along with their respective weights.
+                                        The game then makes use of a <b>Weighted Random Selection</b> algorithm, enabling the random generation of words into an array according to their semantic relevance to the theme.
+                                        Before displaying the words to the user, the array is shuffled using <b>Fisher–Yates Shuffle</b> to ensure that cards don't appear in the same order each game instance.
                                     </p>
+                                    {/* Developing this project helped me gain insight into how to represent physical elements of the DOM using abstract data types, enabling me to more effectively manipulate the DOM. */}
                                 </span>
                             </div>
                         </div>
@@ -467,11 +472,42 @@ function ProjectsPage() {
                             }}
                         >
                             <div className='relative h-full min-h-full'>
-                                <video autoPlay loop muted playsInline
-                                    className='relative h-full w-full rounded-lg flex justify-center items-center'
-                                >
-                                    <source src={ThematleVideo} type="video/mp4"/>
-                                </video>
+                                {slideNum2 == 0 &&
+                                    <video autoPlay loop muted playsInline
+                                        className='relative h-full w-full rounded-lg flex justify-center items-center'
+                                    >
+                                        <source src={ThematleVideo} type="video/mp4" />
+                                    </video>
+                                }
+                                {slideNum2 == 1 &&
+                                    <img src={ThematleImg}
+                                        className='relative h-full w-full rounded-lg flex justify-center items-center object-contain'
+                                    >
+                                    </img>
+                                }
+                                {/* Right Button */}
+                                <div className='absolute top-1/2 right-2 -translate-y-1/2'>
+                                    <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
+                                            sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
+                                        onClick={() => setSlideNum2((slideNum2 + 1) % 3)}
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                {/* Left Button */}
+                                <div className='absolute top-1/2 left-2 -translate-y-1/2'>
+                                    <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
+                                        sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
+                                        onClick={() => setSlideNum2((slideNum2 - 1 + 3) % 3)}
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </motion.div>
                     </div>

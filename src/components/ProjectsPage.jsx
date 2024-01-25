@@ -94,13 +94,17 @@ function ProjectsPage() {
                                         <h3 className='text-sky-200 bg-sky-200 bg-opacity-10 px-1.5 rounded-full mr-2'>TailwindCSS</h3>
                                     </div>
                                     {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
-                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        Eco Archive is a full-stack React-based web application that leverages MySQL to produce an efficient
-                                        database management system for recycling depots, with a central <b>REST API</b> powered by <b>Node.js</b> and <b>Express</b>.
+                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' > 
+                                        What began as merely a class project has evolved into an passion to assist students, including myself, in achieving their fitness and social goals by 
+                                        staying up to date about ongoing gym activities.
+                                        The Open Gym Schedule is full-stack web application that overhauls the inconvenient interaction design of the original university open gym website.
+                                        It enhances the user experience by presenting the events in a familiar calendar interface, complete with filtering and day/week views. Additionally, we give
+                                        users the flexability to download the events as an iCalendar for use in their own personal calendar. 
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        The goal of this project was to advance recycling depots' information management capabilities through centralized and secure data storage, combined with interactive data visualizations that interpret measureable outcomes.
-                                        Additionally, it enhances service accesbility for customers while offering a platform for them to double down on sustainability by donating their earnings to charity.
+                                        Behind the scenes, the backend is hosted on an AWS EC2 instance that executes a daily cron job to scrape data from the original website. 
+                                        The scraped data is then stored in a MongoDB Atlas database, with schemas defined using Mongoose. 
+                                        The API is built on Express and incorporates tRPC, a TypeScript framework, to ensure type safety and inference across both the client and server for ease of development.
                                     </p>
                                 </span>
                             </div>

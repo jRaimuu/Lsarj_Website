@@ -8,6 +8,8 @@ import ThematleVideo from "../assets/ThematleVideo.mp4";
 import ThematleImg from "../assets/ThematleImg.png";
 import IcalVideo from "../assets/IcalVideo.mp4";
 import OpenGymVideo from "../assets/OpenGymVideo.mp4";
+import OpenGymCamera from "../assets/OpenGymCamera.jpg";
+import OldOpenGym from "../assets/OldOpenGym.png";
 import AddToy from "../assets/AddToy.png";
 import SearchBuy from "../assets/SearchBuy.png";
 import RemoveToy from "../assets/RemoveToy.png";
@@ -20,14 +22,23 @@ import StarTexture from "../assets/BGStarTexture.jpg"
 
 function ProjectsPage() {
 
+    // Framer motion references
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
     const ref2 = useRef(null);
     const isInView2 = useInView(ref2, { once: true });
 
+    const ref3 = useRef(null);
+    const isInView3 = useInView(ref3, { once: true });
+
+    const ref4 = useRef(null);
+    const isInView4 = useInView(ref4, { once: true });
+
     const [slideNum1, setSlideNum1] = useState(0);
     const [slideNum2, setSlideNum2] = useState(0);
+    const [slideNum3, setSlideNum3] = useState(0);
+    const [slideNum4, setSlideNum4] = useState(0);
 
     useEffect(() => {
         console.log(slideNum2);
@@ -56,12 +67,12 @@ function ProjectsPage() {
 
                     <div className='absolute opacity-25 w-full h-full bg-cover bg-center'></div>
                     <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-10 md:h-fit h-full'
-                        ref={ref2}>
+                        ref={ref3}>
 
                         <div className='relative overflow-hidden'
                             style={{
-                                transform: isInView2 ? "none" : "translateX(400px)",
-                                opacity: isInView2 ? 1 : 0,
+                                transform: isInView3 ? "none" : "translateX(400px)",
+                                opacity: isInView3 ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
                         >
@@ -71,19 +82,19 @@ function ProjectsPage() {
                                     <div className='flex flex-row justify-between'>
                                         <div className='flex flex-row justify-start'>
                                             <h2 className='text-3xl pr-2 font-mono font-bold text-slate-200'>Open Gym Schedule</h2>
-                                            {/* <a href="https://github.com/jRaimuu/Toy_Store"
+                                            <a href="https://www.uc-open-gym.ca/"
                                                 target="_blank" rel="noopener noreferrer"
                                             >
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-9">
                                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
                                                 </svg>
-                                            </a> */}
+                                            </a>
                                         </div>
-                                        {/* <a href="https://github.com/jRaimuu/Toy_Store"
+                                        <a href="https://github.com/HiltonLuu/Open-Gym-Schedule"
                                             target="_blank" rel="noopener noreferrer"
-                                        > */}
-                                        <img src={ActiveLiving} className='h-8 w-8 mr-3 ml-3 rounded-lg' />
-                                        {/* </a> */}
+                                        >
+                                            <img src={ActiveLiving} className='h-8 w-8 mr-3 ml-3 rounded-lg' />
+                                        </a>
                                     </div>
                                     <div className='flex flex-row pt-1'>
                                         <h3 className='text-indigo-300 bg-indigo-200 bg-opacity-10 px-1.5 rounded-full mr-2'>Next.js</h3>
@@ -94,17 +105,14 @@ function ProjectsPage() {
                                         <h3 className='text-sky-200 bg-sky-200 bg-opacity-10 px-1.5 rounded-full mr-2'>TailwindCSS</h3>
                                     </div>
                                     {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
-                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' > 
-                                        What began as merely a class project has evolved into an passion to assist students, including myself, in achieving their fitness and social goals by 
-                                        staying up to date about ongoing gym activities.
-                                        The Open Gym Schedule is full-stack web application that overhauls the inconvenient interaction design of the original university open gym website.
-                                        It enhances the user experience by presenting the events in a familiar calendar interface, complete with filtering and day/week views. Additionally, we give
-                                        users the flexability to download the events as an iCalendar for use in their own personal calendar. 
+                                    <p className='relative pt-4 xl:text-base text-base text-slate-200' >
+                                        Originating as a class project, The Open Gym Schedule has evolved into a passion project aimed at helping students achieve their fitness and social goals by staying updated on gym activities.
+                                        This full-stack web application transforms the interaction design of the original university open gym website, enhancing the user experience with a familiar calendar interface, activity filtering and flexible event downloads.
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
-                                        Behind the scenes, the backend is hosted on an AWS EC2 instance that executes a daily cron job to scrape data from the original website. 
-                                        The scraped data is then stored in a MongoDB Atlas database, with schemas defined using Mongoose. 
-                                        The API is built on Express and incorporates tRPC, a TypeScript framework, to ensure type safety and inference across both the client and server for ease of development.
+                                        Behind the scenes, the backend is hosted on an <strong>AWS EC2</strong> instance that executes a daily cron job to scrape data from the original website.
+                                        The scraped data is then stored in a <strong>MongoDB Atlas</strong> database, with schemas defined using <strong>Mongoose</strong>.
+                                        The API is built on <strong>Express</strong> and incorporates <strong>tRPC</strong>, a TypeScript framework, to ensure type safety and inference across both the client and server for ease of development.
                                     </p>
                                 </span>
                             </div>
@@ -114,8 +122,8 @@ function ProjectsPage() {
                         {/* Toy Store Video */}
                         <motion.div className='min-h-full h-full w-full relative'
                             style={{
-                                transform: isInView2 ? "none" : "translateX(400px)",
-                                opacity: isInView2 ? 1 : 0,
+                                transform: isInView3 ? "none" : "translateX(200px)",
+                                opacity: isInView3 ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
                         >
@@ -126,23 +134,29 @@ function ProjectsPage() {
                                     >
                                     </img>
                                 } */}
-                                {slideNum2 == 0 &&
+                                {slideNum3 == 0 &&
                                     <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg flex justify-center items-center'
                                     >
                                         <source src={OpenGymVideo} type="video/mp4" />
                                     </video>
                                 }
-                                {slideNum2 == 1 &&
+                                {slideNum3 == 1 &&
                                     <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg flex justify-center items-center'
                                     >
                                         <source src={IcalVideo} type="video/mp4" />
                                     </video>
                                 }
-                                {slideNum2 == 2 &&
-                                    <img src={RemoveToy}
-                                        className='relative h-full w-full rounded-lg flex justify-center items-center'
+                                {slideNum3 == 2 &&
+                                    <img src={OldOpenGym}
+                                        className='relative h-full w-full rounded-lg flex justify-center items-center object-contain'
+                                    >
+                                    </img>
+                                }
+                                {slideNum3 == 3 &&
+                                    <img src={OpenGymCamera}
+                                        className='relative h-full w-full rounded-lg flex justify-center items-center object-contain'
                                     >
                                     </img>
                                 }
@@ -150,7 +164,7 @@ function ProjectsPage() {
                                 <div className='absolute top-1/2 right-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                             sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={() => setSlideNum2((slideNum2 + 1) % 3)}
+                                        onClick={() => setSlideNum3((slideNum3 + 1) % 4)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -162,7 +176,7 @@ function ProjectsPage() {
                                 <div className='absolute top-1/2 left-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                         sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={() => setSlideNum2((slideNum2 - 1 + 3) % 3)}
+                                        onClick={() => setSlideNum3((slideNum3 - 1 + 4) % 4)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -182,7 +196,7 @@ function ProjectsPage() {
                 >
                     <div className='absolute opacity-25 w-full h-full bg-cover bg-center'></div>
 
-                    <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-20 md:h-fit h-full'
+                    <div className='grid xl:grid-cols-2 grid-cols-1 lg:gap-16 gap-8 md:px-32 px-3 pt-20 md:h-fit h-full'
                         ref={ref}>
                         {/* <div className='bg-sate-200 bg-opacity-10 min-h-fit backdrop-filter backdrop-blur-sm rounded-lg shadow-xl z-2 brder borer-slate-700'> */}
 
@@ -199,13 +213,6 @@ function ProjectsPage() {
                                     <div className='flex flex-row justify-between'>
                                         <div className='flex flex-row justify-start'>
                                             <h2 className='text-3xl pr-2 font-mono font-bold text-slate-200'>Eco Archive</h2>
-                                            <a href="https://github.com/anthonyjdam/Eco_Archive"
-                                                target="_blank" rel="noopener noreferrer"
-                                            >
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-9">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-                                                </svg>
-                                            </a>
                                         </div>
                                         <a href="https://github.com/anthonyjdam/Eco_Archive"
                                             target="_blank" rel="noopener noreferrer"
@@ -222,7 +229,7 @@ function ProjectsPage() {
                                     {/* <p className='relative flex xl:h-80 lg:h-fit h-full xl:items-center xl:text-base text-base text-slate-200' > */}
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
                                         Eco Archive is a full-stack React-based web application that leverages MySQL to produce an efficient
-                                        database management system for recycling depots, with a central <b>REST API</b> powered by <b>Node.js</b> and <b>Express</b>.
+                                        database management system for recycling depots, with a central <strong>REST API</strong> powered by <strong>Node.js</strong> and <strong>Express</strong>.
                                     </p>
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
                                         The goal of this project was to advance recycling depots' information management capabilities through centralized and secure data storage, combined with interactive data visualizations that interpret measureable outcomes.
@@ -316,13 +323,6 @@ function ProjectsPage() {
                                     <div className='flex flex-row justify-between'>
                                         <div className='flex flex-row justify-start'>
                                             <h2 className='text-3xl pr-2 font-mono font-bold text-slate-200'>Toy Store</h2>
-                                            <a href="https://github.com/jRaimuu/Toy_Store"
-                                                target="_blank" rel="noopener noreferrer"
-                                            >
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-9">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-                                                </svg>
-                                            </a>
                                         </div>
                                         <a href="https://github.com/jRaimuu/Toy_Store"
                                             target="_blank" rel="noopener noreferrer"
@@ -350,7 +350,7 @@ function ProjectsPage() {
                         {/* Toy Store Video */}
                         <motion.div className='min-h-full h-full w-full relative'
                             style={{
-                                transform: isInView2 ? "none" : "translateX(400px)",
+                                transform: isInView2 ? "none" : "translateX(200px)",
                                 opacity: isInView2 ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
@@ -416,12 +416,12 @@ function ProjectsPage() {
                     {/* <div className='absolute filter mix-blend-plus opacity-25 w-full h-full bg-cover bg-center bg-gradient-image-both'></div> */}
                     <div className='absolute opacity-25 w-full h-full bg-cover bg-center'></div>
                     <div className='grid xl:grid-cols-2 grid-col-1 lg:gap-16 gap-8 md:px-32 px-3 pt-20 md:h-fit h-full'
-                        ref={ref2}>
+                        ref={ref4}>
 
                         <div className='relative overflow-hidden'
                             style={{
-                                transform: isInView2 ? "none" : "translateX(400px)",
-                                opacity: isInView2 ? 1 : 0,
+                                transform: isInView4 ? "none" : "translateX(-200px)",
+                                opacity: isInView4 ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
                         >
@@ -458,8 +458,8 @@ function ProjectsPage() {
                                     <p className='relative pt-4 xl:text-base text-base text-slate-200' >
                                         The challenge in developing Thematle involved the task of generating words with a higher degree of association more frequently than those with lower association.
                                         So, at the core of the game lies a JSON file that stores words along with their respective weights.
-                                        The game then makes use of a <b>Weighted Random Selection</b> algorithm, enabling the random generation of words into an array according to their semantic relevance to the theme.
-                                        Before displaying the words to the user, the array is shuffled using <b>Fisher–Yates Shuffle</b> to ensure that cards don't appear in the same order each game instance.
+                                        The game then makes use of a <strong>Weighted Random Selection</strong> algorithm, enabling the random generation of words into an array according to their semantic relevance to the theme.
+                                        Before displaying the words to the user, the array is shuffled using <strong>Fisher–Yates Shuffle</strong> to ensure that cards don't appear in the same order each game instance.
                                     </p>
                                     {/* Developing this project helped me gain insight into how to represent physical elements of the DOM using abstract data types, enabling me to more effectively manipulate the DOM. */}
                                 </span>
@@ -470,20 +470,20 @@ function ProjectsPage() {
                         {/* Toy Store Video */}
                         <motion.div className='min-h-full h-full w-full relative '
                             style={{
-                                transform: isInView2 ? "none" : "translateX(400px)",
-                                opacity: isInView2 ? 1 : 0,
+                                transform: isInView4 ? "none" : "translateX(-400px)",
+                                opacity: isInView4 ? 1 : 0,
                                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                             }}
                         >
                             <div className='relative h-full min-h-full'>
-                                {slideNum2 == 0 &&
+                                {slideNum4 == 0 &&
                                     <video autoPlay loop muted playsInline
                                         className='relative h-full w-full rounded-lg flex justify-center items-center'
                                     >
                                         <source src={ThematleVideo} type="video/mp4" />
                                     </video>
                                 }
-                                {slideNum2 == 1 &&
+                                {slideNum4 == 1 &&
                                     <img src={ThematleImg}
                                         className='relative h-full w-full rounded-lg flex justify-center items-center object-contain'
                                     >
@@ -493,7 +493,7 @@ function ProjectsPage() {
                                 <div className='absolute top-1/2 right-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                             sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={() => setSlideNum2((slideNum2 + 1) % 3)}
+                                        onClick={() => setSlideNum4((slideNum4 + 1) % 2)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -505,7 +505,7 @@ function ProjectsPage() {
                                 <div className='absolute top-1/2 left-2 -translate-y-1/2'>
                                     <button className='z-10 sm:bg-opacity-100 bg-opacity-50 sm:drop-shadow-[0_5px_5px_rgba(96,165,250,0.7)] drop-shadow-lg rounded-full bg-gray-200  
                                         sm:border-4 border-0 active:ring active:ring-blue-300 hover:bg-white hover:border-white'
-                                        onClick={() => setSlideNum2((slideNum2 - 1 + 3) % 3)}
+                                        onClick={() => setSlideNum4((slideNum4 - 1 + 2) % 2)}
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svgh" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-6 h-6 text-gray-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />

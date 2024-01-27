@@ -8,11 +8,17 @@ import ColorStreak from "../assets/ColorStreak.png";
 import StarTexture from "../assets/BGStarTexture.jpg"
 import { motion, useAnimation } from 'framer-motion';
 
+/**
+ * Self notes:
+ * If spline model does not render then you must update it first: npm install @splinetool/runtime@latest
+ * 
+ * 
+ */
 
 function MainPageV2() {
 
   const [text] = useTypewriter({
-    words: ['Computer Science Student', 'Developer', 'Designer'],
+    words: ['Computer Science Student', 'Software Developer', 'Problem Solver', 'Designer'],
     loop: {},
   });
 
@@ -71,27 +77,8 @@ function MainPageV2() {
           </div>
 
           {/* Moon */}
-          {/* <div className="relative flex justify-end items-center">
-          <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
-            rounded-full blur-sm opacity-60"
-          >
-            <img src={MoonTexture}
-              className='absolute rotate-12 opacity-100 w-screen h-full rounded-full' />
-          </div>
-          <div className="absolute lg:w-blurW lg:h-blurH2 -right-24 -top-80
-            bg-rose-200 rounded-full blur-2xl opacity-70 hover:animate-animateBlur"
-          >
-
-          </div>
-          <img
-            className="absolute top-0 -right-52 rounded-full hue-rotate-60 opacity-100 bottom-0"
-            src={ColorStreak}
-          />
-
-        </div> */}
-
           <div className="relative flex justify-end items-center">
-            <div className="fixed lg:w-blurW lg:h-blurH2 -right-24 -top-80
+            <div className="fixed lg:w-moonW lg:h-moonH -right-24 -top-80
             bg-indigo-200 rounded-full filter blur-sm opacity-60"
             >
               <img src={MoonTexture}
@@ -106,7 +93,6 @@ function MainPageV2() {
               className="fixed top-0 -right-52 rounded-full filter mix-blend-difference opacity-100 blur-2xl bottom-0"
               src={ColorStreak}
             />
-
           </div>
 
 
@@ -115,7 +101,7 @@ function MainPageV2() {
 
             {/* Intro Text */}
             <div className="relative top-0 bottom-0 max-w-xl px-3 mx-auto m-4 pb-16">
-              <div className="absolute w-6 h-2 pt-7 xs:ml-[302px] ml-28 xs:mt-1 mt-20 z-10
+              <div className="absolute w-6 h-2 pt-6 xs:ml-[302px] ml-28 xs:mt-1 -top-1 xs:-top-0 mt-20 z-10
             bg-[#84DCCF] rounded-full blur-sm  animate-pulse"
               >
               </div>
@@ -141,7 +127,7 @@ function MainPageV2() {
               {/* <div className="absolute -bottom-36 sm:-bottom-72 md:-bottom-96 lg:-bottom-64 z-10 lg:w-blurW lg:h-blurH2"> */}
               <div
                 ref={ref}
-                className="absolute w-[500px] h-[500px] z-10 md:w-blurW md:h-blurH2 -bottom-36 md:-bottom-64"
+                className="absolute w-[480px] h-[480px] z-10 md:w-blurW md:h-blurH2 -bottom-36 md:-bottom-64"
               >
 
 
@@ -152,7 +138,7 @@ function MainPageV2() {
                   </div>
                 }
               > */}
-                <Spline scene="https://draft.spline.design/QpSIWsg0qt6YJKhn/scene.splinecode"
+                <Spline scene="https://draft.spline.design/lbYUU1g7sZ3i2Lg3/scene.splinecode"
                   onClick={(e) => {
                     // handleOnHover(e);
                   }}

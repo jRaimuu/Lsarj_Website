@@ -25,7 +25,7 @@ function AboutPage() {
                     {/* <div className='absolute top-24 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-cyan-800 '></div>
                     <div className='absolute top-32 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-violet-900'></div> */}
                     <div className='absolute top-24 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full  blur-2xl bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-600 to-violet-900'></div>
-                    
+
                     <div className='relative top-32 scale-x-150 w-full lg:h-screen sm:h-[50em] h-screen rounded-t-full 
                         bg-gradient-to-b from-gray-900 to-gray-950 border-2 border-opacity-75 saturate-150 border-blue-400 text-white flex justify-center items-center'>
                         <img src={PlanetTexture}
@@ -46,16 +46,15 @@ function AboutPage() {
                                 </div>
                                 <div className='xs:text-base text-sm md:mx-32 mx-3 my-3'>
                                     <p className='pb-6'>
-                                        I'm an enthusiastic student pursuing a degree in <b>Computer Science</b>.
+                                        I'm a passionate student on the exciting journey of earning a degree in <b>Computer Science</b>!
                                     </p>
                                     <p className='pb-4'>
                                         <b>HOW IT STARTED: </b>
                                         "Hello, World!" — is where many might begin programming, but my journey started back in elementary school when I curiously plunged into the world of programming Lego Mindstorm robots.
-                                        Following a near miss for first place in a junior robotics competition, I was determined to challenge myself and learn more about technology. From thereon, I upgraded my skillset in high school by experimenting with game development and tinkering with Vex Robots and Phidget Rovers.
-                                        Fast forward to today, as a student, I am committed to ongoing learning and applying my interest in computer science to industries like <b> robotics, biology, medicine </b> and beyond.
-                                    </p>
+                                        Following a near miss for first place in a junior robotics competition, I was determined to challenge myself and learn more about technology.
+                                        Fast forward to today, my drive for ongoing learning motivates me to apply my expertise in computer science to solve <strong>real-world problems</strong> in <strong>software development, biology, robotics</strong>, and beyond.                                    </p>
                                     <p>
-                                        Away from my desk, you can find me enjoying a game of volleyball, biking across the city, carving down ski slopes, or capturing life's finest moments with my camera.
+                                        Away from my desk, you can find me enjoying a game of volleyball, biking across the city, carving down ski slopes, or capturing life's finest moments with my camera 📷.
                                     </p>
                                 </div>
                             </span>
